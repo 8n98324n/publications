@@ -1,0 +1,4 @@
+task,model,observed_mean_balanced_accuracy,observed_sd_across_repeats,permutation_p,null_mean,null_sd,null_q025,null_q975,n_permutations,note
+condition4,modality_pca_logit_C0.01,0.4333909749670619,0.012987657979911695,0.005,0.2494114594712694,0.03612853555681035,0.181077692687747,0.31472105566534914,199,exploratory model-development test; p does not adjust for prior model-family search
+petting,modality_pca_logit_C0.01,0.6086956521739131,0.027113459324448835,0.025,0.49632401136115356,0.05110639883606003,0.40929347826086954,0.6054347826086957,199,exploratory model-development test; p does not adjust for prior model-family search
+feeding,lda_shrinkage,0.7195271867612293,0.03571108726424302,0.005,0.48744276940256837,0.05714990446120233,0.36939834515366426,0.5858758865248226,199,exploratory model-development test; p does not adjust for prior model-family search

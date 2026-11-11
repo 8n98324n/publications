@@ -1,0 +1,37 @@
+Experiment,Stage,Construct,n,MAE,RMSE,R2,Pearson_r,p_r,Spearman_rho,p_rho
+Exp 1: Video Only,Pre-Test,STAI-AA (10-40),92,5.511,6.956,-0.359,0.141,0.1788,0.134,0.2045
+Exp 1: Video Only,Pre-Test,STAI-AP (10-40),92,4.163,5.644,-0.249,0.022,0.8363,-0.039,0.7089
+Exp 1: Video Only,Pre-Test,STAI-Total (20-80),92,8.217,10.735,-0.301,0.125,0.2358,0.128,0.2225
+Exp 1: Video Only,Post-Test,STAI-AA (10-40),92,5.25,6.387,-0.391,-0.05,0.634,-0.029,0.786
+Exp 1: Video Only,Post-Test,STAI-AP (10-40),92,3.576,4.992,-0.369,0.063,0.5522,0.02,0.8478
+Exp 1: Video Only,Post-Test,STAI-Total (20-80),92,7.109,9.331,-0.471,-0.001,0.9936,-0.012,0.9082
+Exp 1: Video Only,Improvement (Pre - Post),Delta STAI-AA,92,4.174,5.302,-0.644,0.02,0.8517,0.055,0.6058
+Exp 1: Video Only,Improvement (Pre - Post),Delta STAI-AP,92,3.5,4.919,-0.774,0.098,0.3539,0.12,0.2532
+Exp 1: Video Only,Improvement (Pre - Post),Delta STAI-Total,92,6.739,8.938,-1.053,0.075,0.4759,0.133,0.206
+Exp 2: Video + Audio (No Speech Text),Pre-Test,STAI-AA (10-40),92,5.533,6.946,-0.356,0.059,0.576,0.082,0.4365
+Exp 2: Video + Audio (No Speech Text),Pre-Test,STAI-AP (10-40),92,4.924,6.253,-0.532,-0.011,0.9169,0.015,0.8899
+Exp 2: Video + Audio (No Speech Text),Pre-Test,STAI-Total (20-80),92,8.565,11.437,-0.477,0.04,0.7019,0.11,0.2958
+Exp 2: Video + Audio (No Speech Text),Post-Test,STAI-AA (10-40),92,4.826,5.888,-0.182,0.223,0.0329,0.286,0.0058
+Exp 2: Video + Audio (No Speech Text),Post-Test,STAI-AP (10-40),92,3.707,4.924,-0.332,0.016,0.8771,0.032,0.7644
+Exp 2: Video + Audio (No Speech Text),Post-Test,STAI-Total (20-80),92,6.946,8.782,-0.303,0.147,0.1623,0.18,0.0855
+Exp 2: Video + Audio (No Speech Text),Improvement (Pre - Post),Delta STAI-AA,92,4.163,5.382,-0.695,0.198,0.0585,0.163,0.1203
+Exp 2: Video + Audio (No Speech Text),Improvement (Pre - Post),Delta STAI-AP,92,3.848,4.996,-0.83,0.158,0.1321,0.09,0.3927
+Exp 2: Video + Audio (No Speech Text),Improvement (Pre - Post),Delta STAI-Total,92,7.12,8.878,-1.025,0.236,0.0236,0.192,0.0674
+Exp 3: Video + Audio + Speech Context,Pre-Test,STAI-AA (10-40),92,5.728,6.952,-0.358,0.043,0.6824,0.078,0.4579
+Exp 3: Video + Audio + Speech Context,Pre-Test,STAI-AP (10-40),92,5.304,6.63,-0.723,0.026,0.806,0.116,0.2689
+Exp 3: Video + Audio + Speech Context,Pre-Test,STAI-Total (20-80),92,9.402,11.786,-0.568,0.038,0.7166,0.09,0.3936
+Exp 3: Video + Audio + Speech Context,Post-Test,STAI-AA (10-40),92,5.065,6.217,-0.318,0.131,0.2117,0.192,0.067
+Exp 3: Video + Audio + Speech Context,Post-Test,STAI-AP (10-40),92,3.457,4.504,-0.114,0.257,0.0134,0.217,0.0373
+Exp 3: Video + Audio + Speech Context,Post-Test,STAI-Total (20-80),92,6.957,8.856,-0.325,0.2,0.0559,0.234,0.0247
+Exp 3: Video + Audio + Speech Context,Improvement (Pre - Post),Delta STAI-AA,92,4.489,5.721,-0.915,0.088,0.4046,0.128,0.2247
+Exp 3: Video + Audio + Speech Context,Improvement (Pre - Post),Delta STAI-AP,92,4.957,6.429,-2.03,-0.162,0.1232,-0.087,0.4071
+Exp 3: Video + Audio + Speech Context,Improvement (Pre - Post),Delta STAI-Total,92,8.707,10.995,-2.106,-0.063,0.5485,0.032,0.7625
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Pre-Test,STAI-AA (10-40),92,6.043,7.277,-0.488,-0.032,0.7605,-0.085,0.4219
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Pre-Test,STAI-AP (10-40),92,5.565,6.782,-0.803,-0.014,0.8945,0.129,0.2203
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Pre-Test,STAI-Total (20-80),92,9.826,12.097,-0.652,-0.027,0.8004,-0.061,0.5623
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Post-Test,STAI-AA (10-40),92,5.054,6.192,-0.307,0.129,0.2193,0.14,0.1833
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Post-Test,STAI-AP (10-40),92,4.12,5.412,-0.609,-0.119,0.259,-0.064,0.5469
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Post-Test,STAI-Total (20-80),92,7.457,9.544,-0.539,-0.006,0.9552,-0.004,0.9714
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Improvement (Pre - Post),Delta STAI-AA,92,4.424,5.665,-0.878,0.118,0.2638,0.068,0.5194
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Improvement (Pre - Post),Delta STAI-AP,92,4.902,6.289,-1.9,-0.164,0.1175,-0.086,0.4155
+Exp 4: Video + Audio + Speech + Physio (HR & Thermal),Improvement (Pre - Post),Delta STAI-Total,92,8.609,10.816,-2.006,-0.039,0.7145,-0.028,0.7874

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Formal study scopes; DEMO mode uses explicitly fictional smaller lists",
+  "type": "object",
+  "required": ["study_main100", "specified_avrr92", "independent_thermal79"],
+  "additionalProperties": false,
+  "properties": {
+    "study_main100": {"type": "array", "minItems": 100, "maxItems": 100, "uniqueItems": true, "items": {"type": "string", "pattern": "^[0-9]{3}$"}},
+    "specified_avrr92": {"type": "array", "minItems": 92, "maxItems": 92, "uniqueItems": true, "items": {"type": "string", "pattern": "^[0-9]{3}$"}},
+    "independent_thermal79": {"type": "array", "minItems": 79, "maxItems": 79, "uniqueItems": true, "items": {"type": "string", "pattern": "^[0-9]{3}$"}}
+  }
+}

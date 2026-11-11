@@ -1,0 +1,37 @@
+Experiment,Cue_Category,Mention_Count_of_184,Mention_Pct,Delta_Pred_STAI_AA,r_Pred_STAI_AA,p_Pred_STAI_AA,Delta_Pred_STAI_AP,r_Pred_STAI_AP,p_Pred_STAI_AP,Delta_GT_STAI_AA,Delta_GT_STAI_AP
+Exp 1: Video Only,Visual_Smile_Warmth,97,52.7,-0.18,-0.035,0.6367,-0.28,-0.051,0.4904,0.82,-0.64
+Exp 1: Video Only,Visual_Tension_Frown,123,66.8,0.12,0.021,0.7791,0.11,0.019,0.796,-0.86,-1.55
+Exp 1: Video Only,Visual_Calm_Posture,184,100.0,,,,,,,,
+Exp 1: Video Only,Audio_Pitch_Prosody,0,0.0,,,,,,,,
+Exp 1: Video Only,Audio_Jitter_Tremor_Pause,13,7.1,1.87,0.183,0.0128,2.17,0.203,0.0057,3.32,1.79
+Exp 1: Video Only,Speech_Positive_Semantics,72,39.1,-1.72,-0.322,0.0,-1.59,-0.284,0.0001,0.09,-0.73
+Exp 1: Video Only,Speech_Stress_Semantics,129,70.1,-1.16,-0.203,0.0058,-1.26,-0.211,0.004,2.6,0.73
+Exp 1: Video Only,Physio_HR_HRV,0,0.0,,,,,,,,
+Exp 1: Video Only,Physio_Thermal_Nasal_Cheek,1,0.5,,,,,,,,
+Exp 2: Video + Audio (No Speech Text),Visual_Smile_Warmth,69,37.5,0.72,0.1,0.1783,0.68,0.099,0.1832,0.41,0.36
+Exp 2: Video + Audio (No Speech Text),Visual_Tension_Frown,72,39.1,0.91,0.127,0.085,0.85,0.123,0.0953,-0.25,-0.2
+Exp 2: Video + Audio (No Speech Text),Visual_Calm_Posture,180,97.8,-5.44,-0.226,0.002,-6.63,-0.288,0.0001,0.98,0.11
+Exp 2: Video + Audio (No Speech Text),Audio_Pitch_Prosody,60,32.6,-0.04,-0.006,0.9375,-0.09,-0.013,0.8652,-0.11,0.23
+Exp 2: Video + Audio (No Speech Text),Audio_Jitter_Tremor_Pause,63,34.2,-0.26,-0.035,0.6345,-0.22,-0.03,0.6815,0.54,-0.19
+Exp 2: Video + Audio (No Speech Text),Speech_Positive_Semantics,56,30.4,-1.57,-0.206,0.0051,-1.63,-0.224,0.0023,-1.91,-0.82
+Exp 2: Video + Audio (No Speech Text),Speech_Stress_Semantics,102,55.4,-0.36,-0.051,0.4934,-0.32,-0.048,0.5216,0.67,-0.11
+Exp 2: Video + Audio (No Speech Text),Physio_HR_HRV,0,0.0,,,,,,,,
+Exp 2: Video + Audio (No Speech Text),Physio_Thermal_Nasal_Cheek,2,1.1,,,,,,,,
+Exp 3: Video + Audio + Speech Context,Visual_Smile_Warmth,70,38.0,-0.4,-0.052,0.4792,-0.16,-0.019,0.7965,0.02,1.12
+Exp 3: Video + Audio + Speech Context,Visual_Tension_Frown,46,25.0,4.18,0.484,0.0,4.59,0.5,0.0,0.99,0.67
+Exp 3: Video + Audio + Speech Context,Visual_Calm_Posture,183,99.5,,,,,,,,
+Exp 3: Video + Audio + Speech Context,Audio_Pitch_Prosody,17,9.2,-0.35,-0.027,0.7135,-0.45,-0.033,0.6599,-2.51,-1.03
+Exp 3: Video + Audio + Speech Context,Audio_Jitter_Tremor_Pause,28,15.2,3.52,0.338,0.0,4.11,0.371,0.0,1.06,0.76
+Exp 3: Video + Audio + Speech Context,Speech_Positive_Semantics,70,38.0,-3.84,-0.498,0.0,-3.82,-0.466,0.0,-0.9,-0.2
+Exp 3: Video + Audio + Speech Context,Speech_Stress_Semantics,170,92.4,0.98,0.07,0.3475,0.83,0.055,0.4548,-1.28,-0.35
+Exp 3: Video + Audio + Speech Context,Physio_HR_HRV,0,0.0,,,,,,,,
+Exp 3: Video + Audio + Speech Context,Physio_Thermal_Nasal_Cheek,2,1.1,,,,,,,,
+Exp 4: Video + Audio + Speech + Physio,Visual_Smile_Warmth,61,33.2,-0.98,-0.126,0.0881,-1.22,-0.15,0.0417,-0.56,0.65
+Exp 4: Video + Audio + Speech + Physio,Visual_Tension_Frown,31,16.8,5.95,0.611,0.0,6.29,0.616,0.0,0.73,1.5
+Exp 4: Video + Audio + Speech + Physio,Visual_Calm_Posture,183,99.5,,,,,,,,
+Exp 4: Video + Audio + Speech + Physio,Audio_Pitch_Prosody,23,12.5,-1.57,-0.143,0.0534,-1.89,-0.164,0.0262,-1.71,1.37
+Exp 4: Video + Audio + Speech + Physio,Audio_Jitter_Tremor_Pause,21,11.4,2.67,0.233,0.0015,2.6,0.216,0.0033,2.55,0.15
+Exp 4: Video + Audio + Speech + Physio,Speech_Positive_Semantics,80,43.5,-3.29,-0.448,0.0,-3.41,-0.442,0.0,-1.07,0.47
+Exp 4: Video + Audio + Speech + Physio,Speech_Stress_Semantics,149,81.0,2.55,0.275,0.0002,2.63,0.27,0.0002,-0.21,-1.35
+Exp 4: Video + Audio + Speech + Physio,Physio_HR_HRV,121,65.8,-0.31,-0.041,0.5835,0.29,0.036,0.6232,-0.3,0.84
+Exp 4: Video + Audio + Speech + Physio,Physio_Thermal_Nasal_Cheek,15,8.2,0.76,0.057,0.4419,1.34,0.096,0.1947,2.7,0.17

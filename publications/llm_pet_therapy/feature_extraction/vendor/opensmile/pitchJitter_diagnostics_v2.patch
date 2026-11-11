@@ -1,0 +1,262 @@
+--- a/src/lld/pitchJitter.cpp
++++ b/src/lld/pitchJitter.cpp
+@@ -18,6 +18,31 @@
+ 
+ #include <lld/pitchJitter.hpp>
+ 
++// JITTER_DIAG_V2_BEGIN state_and_enable
++
++#include <cstdlib>
++#include <cstring>
++#include <map>
++
++// State below is diagnostic-only. It is never read by the original algorithm.
++// A single component-manager thread is required by the validation runner.
++namespace {
++struct JitterDiagnosticStateV2 {
++  long long frameSequence, attemptSequence, previousAttempt;
++  long previousStart, previousEnd, previousSupportStart, previousSupportEnd;
++  double previousPeriod;
++  bool havePrevious, gapSinceAccepted;
++  JitterDiagnosticStateV2() : frameSequence(0), attemptSequence(0), previousAttempt(-1),
++    previousStart(-1), previousEnd(-1), previousSupportStart(-1), previousSupportEnd(-1),
++    previousPeriod(0.0), havePrevious(false), gapSinceAccepted(false) {}
++};
++static std::map<const void *, JitterDiagnosticStateV2> jitterDiagnosticStatesV2;
++static bool jitterDiagnosticsEnabledV2() {
++  const char *value = std::getenv("OPENSMILE_JITTER_DIAGNOSTICS_V2");
++  return value != NULL && std::strcmp(value, "1") == 0;
++}
++}
++// JITTER_DIAG_V2_END state_and_enable
+ #define MODULE "cPitchJitter"
+ 
+ SMILECOMPONENT_STATICS(cPitchJitter)
+@@ -93,6 +118,9 @@
+     filehandle(NULL), threshCC_(0.5), minNumPeriods(2),
+     useBrokenJitterThresh_(1)
+ {
++// JITTER_DIAG_V2_BEGIN constructor_cleanup
++  jitterDiagnosticStatesV2.erase(this);
++// JITTER_DIAG_V2_END constructor_cleanup
+   char *tmp = myvprint("%s.F0reader",getInstName());
+   F0reader = (cDataReader *)(cDataReader::create(tmp));
+   if (F0reader == NULL) {
+@@ -613,6 +641,27 @@
+   double pitchT = fvec->tmeta->period; // pitch frame period
+ 
+ 
++// JITTER_DIAG_V2_BEGIN frame_init
++
++  JitterDiagnosticStateV2 *jd2 = jitterDiagnosticsEnabledV2() ? &jitterDiagnosticStatesV2[this] : NULL;
++  const long long jd2Frame = jd2 != NULL ? jd2->frameSequence++ : -1;
++  const bool jd2IndexDiscontinuity = startVidx - lastMis != lastIdx;
++  const double jd2PreviousAlgorithmPeriod = (double)lastT0;
++  const double jd2PreviousJitter = (double)lastJitterLocal;
++  long jd2ReadStart = -1, jd2ReadEnd = -1;
++  long jd2SupportStart = -1, jd2SupportEnd = -1;
++  long jd2PairCount = 0, jd2UnsupportedPairs = 0, jd2Rejected = 0, jd2NoPeak = 0;
++  long long jd2Attempt = -1;
++  if (jd2 != NULL) {
++    if (jd2Frame == 0) {
++      fprintf(stderr, "JITTER_V2_CONFIG,%s,%d,%d,%.17g,%.17g,%d,%d,%d,%d,%d,%.17g\n",
++        getInstName(), (int)sizeof(FLOAT_DMEM), minNumPeriods, (double)threshCC_,
++        (double)searchRangeRel, useBrokenJitterThresh_, usePeakToPeakPeriodLength_,
++        jitterLocal, jitterLocalEnv, onlyVoiced, T);
++    }
++    if (jd2IndexDiscontinuity) jd2->gapSinceAccepted = true;
++  }
++// JITTER_DIAG_V2_END frame_init
+   long ppLen = (long)ceil(pitchT/T);  // step size in samples of pitch frames
+   long ovl = lenF - ppLen;  // pitch frame overlap (in samples)
+ 
+@@ -664,6 +713,15 @@
+   // read wave data for the current pitch frame
+   cMatrix *mat = reader_->getMatrix(lastIdx, toRead /* = pitch frame length */);
+ 
++// JITTER_DIAG_V2_BEGIN read_failure
++
++  if (jd2 != NULL && (mat == NULL || maxRead < 1 || mat->data == NULL)) {
++    jd2->gapSinceAccepted = true;
++    fprintf(stderr, "JITTER_V2_READ_FAILURE,%s,%lld,%.17g,%ld,%ld,%ld,%d,%d\n",
++      getInstName(), jd2Frame, fvec->tmeta->time, lastIdx, toRead, maxRead,
++      (int)(mat == NULL), (int)(mat != NULL && mat->data == NULL));
++  }
++// JITTER_DIAG_V2_END read_failure
+   if (mat == NULL && !isEOI()) {
+     // TODO: print this error message only if lastIdx is well behind the current F0 frame vIdx equivalent!
+     SMILE_IERR(2, "no pcm data read!  lastIdx %ld  toRead %ld. Check inpuMaxDelaySec option! It needs to be increased (unless you get this error message close to the end of processing, current tick = %lld).", lastIdx, toRead, t);
+@@ -675,6 +733,19 @@
+     return TICK_INACTIVE;
+   }
+ 
++// JITTER_DIAG_V2_BEGIN frame_begin
++
++  jd2ReadStart = lastIdx;
++  jd2ReadEnd = lastIdx + mat->nT;
++  jd2SupportStart = jd2ReadStart;
++  jd2SupportEnd = jd2ReadEnd;
++  if (jd2 != NULL) {
++    fprintf(stderr, "JITTER_V2_BEGIN,%s,%lld,%.17g,%.17g,%.17g,%.17g,%ld,%ld,%ld,%ld,%d,%.17g,%.17g\n",
++      getInstName(), jd2Frame, fvec->tmeta->time, (double)F0, T, pitchT, lenF,
++      jd2ReadStart, toRead, mat->nT, (int)jd2IndexDiscontinuity,
++      jd2PreviousAlgorithmPeriod, jd2PreviousJitter);
++  }
++// JITTER_DIAG_V2_END frame_begin
+   // jitter computation variables:
+   FLOAT_DMEM nPeriodsLocal = 0;
+   FLOAT_DMEM nPeriodsDDP = 0;
+@@ -806,6 +877,19 @@
+           threshCC_ = minCC;
+         }
+         //printf("%f - %f\n", ccI, threshCC_);
++// JITTER_DIAG_V2_BEGIN correlation_search
++
++        if (jd2 != NULL) {
++          jd2Attempt = jd2->attemptSequence++;
++          const bool jd2Accepted = ccI > threshCC_;
++          if (!jd2Accepted) { jd2Rejected++; jd2->gapSinceAccepted = true; }
++          fprintf(stderr, "JITTER_V2_SEARCH,%s,%lld,%lld,%.17g,%ld,%ld,%ld,%ld,%s,%.17g,%.17g,%.17g\n",
++            getInstName(), jd2Frame, jd2Attempt, fvec->tmeta->time,
++            jd2ReadStart + os, jd2ReadStart + os + 2 * T0maxF,
++            jd2ReadStart + os, jd2ReadStart + start,
++            jd2Accepted ? "accepted" : "rejected_cc", ccI, (double)threshCC_, maxId);
++        }
++// JITTER_DIAG_V2_END correlation_search
+         if (ccI > threshCC_) { 
+ // TODO: what happens the the lastPeriod, average etc. when a pitch period is discarded!? DEBUG THIS IN DETAIL!
+           FLOAT_DMEM period = 0.0;
+@@ -814,6 +898,46 @@
+           } else {
+             period = (FLOAT_DMEM)maxId;
+           }
++// JITTER_DIAG_V2_BEGIN accepted_period
++
++          if (jd2 != NULL) {
++            const long jd2Start = jd2ReadStart + os;
++            const long jd2End = jd2ReadStart + start;
++            const long jd2SearchEnd = jd2ReadStart + os + 2 * T0maxF;
++            const bool jd2UsesPair = lastT0 > 0.0;
++            const bool jd2Adjacent = jd2->havePrevious && jd2Start == jd2->previousEnd;
++            const bool jd2Tracked = jd2->havePrevious && jd2->previousPeriod == (double)lastT0;
++            const bool jd2PairSupported = jd2UsesPair && jd2Adjacent && jd2Tracked &&
++              !jd2->gapSinceAccepted && !jd2IndexDiscontinuity;
++            // Cast exactly as the original diff calculation, but do not assign
++            // any original variable or recompute the reported jitter output.
++            const double jd2Diff = jd2UsesPair ? (double)(FLOAT_DMEM)fabs(lastT0 - period) : 0.0;
++            if (jd2UsesPair) {
++              jd2PairCount++;
++              if (!jd2PairSupported) jd2UnsupportedPairs++;
++              if (jd2->havePrevious) {
++                if (jd2->previousSupportStart < jd2SupportStart) jd2SupportStart = jd2->previousSupportStart;
++                if (jd2->previousSupportEnd > jd2SupportEnd) jd2SupportEnd = jd2->previousSupportEnd;
++              }
++            }
++            fprintf(stderr, "JITTER_V2_PERIOD,%s,%lld,%lld,%.17g,%ld,%ld,%ld,%ld,%.17g,%.17g,%d,%.17g,%lld,%ld,%ld,%ld,%ld,%d,%d,%d,%d,%d\n",
++              getInstName(), jd2Frame, jd2Attempt, fvec->tmeta->time,
++              jd2Start, jd2End, jd2Start, jd2SearchEnd, (double)period,
++              (double)lastT0, (int)jd2UsesPair, jd2Diff, jd2->previousAttempt,
++              jd2->previousStart, jd2->previousEnd, jd2->previousSupportStart,
++              jd2->previousSupportEnd, (int)jd2->gapSinceAccepted,
++              (int)jd2Adjacent, (int)jd2Tracked, (int)jd2PairSupported,
++              (int)jd2IndexDiscontinuity);
++            jd2->havePrevious = true;
++            jd2->previousAttempt = jd2Attempt;
++            jd2->previousStart = jd2Start;
++            jd2->previousEnd = jd2End;
++            jd2->previousSupportStart = jd2Start;
++            jd2->previousSupportEnd = jd2SearchEnd;
++            jd2->previousPeriod = (double)period;
++            jd2->gapSinceAccepted = false;
++          }
++// JITTER_DIAG_V2_END accepted_period
+           avgPeriod += period;
+           nPeriods += 1.0;
+           if (lastT0 > 0.0) {
+@@ -841,6 +965,18 @@
+ 
+         //SMILE_IMSG(2, "old start = %i ; new start = %i  (EV: %i - cc@max %f [%i %f] [T0f = %i])", os, start, lastIdx + start, cc[maxI-1], T0minF + maxI, maxId / T, T0f);
+       } else {
++// JITTER_DIAG_V2_BEGIN no_peak
++
++        if (jd2 != NULL) {
++          jd2Attempt = jd2->attemptSequence++;
++          jd2NoPeak++;
++          jd2->gapSinceAccepted = true;
++          fprintf(stderr, "JITTER_V2_SEARCH,%s,%lld,%lld,%.17g,%ld,%ld,%ld,%ld,no_peak,0,%.17g,0\n",
++            getInstName(), jd2Frame, jd2Attempt, fvec->tmeta->time,
++            jd2ReadStart + os, jd2ReadStart + os + 2 * T0maxF,
++            jd2ReadStart + os, jd2ReadStart + os + T0f, (double)threshCC_);
++        }
++// JITTER_DIAG_V2_END no_peak
+         start += T0f;
+       }
+       if (start < toRead0 - 1) {
+@@ -910,6 +1046,17 @@
+     start = toRead0;
+     lastPeriod = toRead0;
+     lastMis = 0;
++// JITTER_DIAG_V2_BEGIN unvoiced_reset
++
++    if (jd2 != NULL) {
++      jd2->havePrevious = false;
++      jd2->gapSinceAccepted = false;
++      jd2->previousAttempt = -1;
++      jd2->previousStart = jd2->previousEnd = -1;
++      jd2->previousSupportStart = jd2->previousSupportEnd = -1;
++      jd2->previousPeriod = 0.0;
++    }
++// JITTER_DIAG_V2_END unvoiced_reset
+     // reset memory:
+     lastT0 = 0.0; lastDiff=0.0;
+     lastJitterDDP = 0.0; lastJitterLocal = 0.0;
+@@ -947,10 +1094,16 @@
+   if (out == NULL) OUT_OF_MEMORY;
+ 
+   
++// JITTER_DIAG_V2_BEGIN difference_sum
++  const double jd2DifferenceSum = (double)JitterLocal;
++// JITTER_DIAG_V2_END difference_sum
+   if ((nPeriods>0.0)&&(nPeriodsLocal > 0.0)&&(F0>0.0)) {
+     JitterLocal /= nPeriodsLocal;
+     lastJitterLocal_b = lastJitterLocal = JitterLocal / (avgPeriod/nPeriods);
+   }
++// JITTER_DIAG_V2_BEGIN unclamped_ratio
++  const double jd2UnclampedRatio = (double)lastJitterLocal;
++// JITTER_DIAG_V2_END unclamped_ratio
+   if (jitterLocal) {
+     //printf("avgperiod = %f (over %f)  (F0=%f)\n", 1.0/(avgPeriod/nPeriods), nPeriods, F0);
+     if ((nPeriods>0.0)&&(nPeriodsLocal > 0.0)&&(F0>0.0)) {
+@@ -1077,6 +1230,22 @@
+     out->data[n++] = fabs(maxCC-minCC);
+   }
+ 
++// JITTER_DIAG_V2_BEGIN frame_end
++
++  if (jd2 != NULL) {
++    // 0=unvoiced, 1=carry-forward/no accepted period,
++    // 2=accepted period but no pair (zero placeholder), 3=current estimate.
++    const int jd2Branch = F0 <= 0.0 ? 0 : (nPeriods <= 0.0 ? 1 : (nPeriodsLocal <= 0.0 ? 2 : 3));
++    fprintf(stderr, "JITTER_V2_FRAME,%s,%lld,%.17g,%.17g,%.17g,%ld,%ld,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g,%d,%ld,%ld,%ld,%ld,%ld,%ld,%d,%d,%d\n",
++      getInstName(), jd2Frame, fvec->tmeta->time, (double)F0, T,
++      jd2ReadStart, jd2ReadEnd, (double)nPeriods, (double)nPeriodsLocal,
++      (double)avgPeriod, jd2DifferenceSum, jd2PreviousJitter, jd2UnclampedRatio,
++      jitterLocal ? (double)out->data[0] : 0.0, jd2Branch, jd2PairCount,
++      jd2UnsupportedPairs, jd2Rejected, jd2NoPeak, jd2SupportStart,
++      jd2SupportEnd, (int)jd2IndexDiscontinuity, jitterLocal,
++      (int)(jitterLocal && jd2UnclampedRatio > 1.0));
++  }
++// JITTER_DIAG_V2_END frame_end
+   out->setTimeMeta(fvec->tmeta);
+   writer_->setNextFrame(out);
+ 
+@@ -1200,6 +1369,9 @@
+ 
+ cPitchJitter::~cPitchJitter()
+ {
++// JITTER_DIAG_V2_BEGIN destructor_cleanup
++  jitterDiagnosticStatesV2.erase(this);
++// JITTER_DIAG_V2_END destructor_cleanup
+   // cleanup...
+   if (out != NULL) {
+     delete out;

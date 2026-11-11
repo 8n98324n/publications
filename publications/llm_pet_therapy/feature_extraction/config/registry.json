@@ -1,0 +1,211 @@
+[
+  {
+    "feature_id": "smile_prevalence_score",
+    "label": "Visible Smile Prevalence Score (0-4)",
+    "unit": "score",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": 4.0,
+    "presentation_multiplier": 1.0,
+    "window_variant": "complete_answer_video",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "smile_intensity_score",
+    "label": "Visible Smile Morphological Intensity Score (0-4)",
+    "unit": "score",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": 4.0,
+    "presentation_multiplier": 1.0,
+    "window_variant": "complete_answer_video",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "au05_prevalence",
+    "label": "AU05 (Upper Lid Raiser) Prevalence",
+    "unit": "proportion",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": 1.0,
+    "presentation_multiplier": 100.0,
+    "window_variant": "full_answer",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "au07_prevalence",
+    "label": "AU07 (Lid Tightener) Prevalence",
+    "unit": "proportion",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": 1.0,
+    "presentation_multiplier": 100.0,
+    "window_variant": "full_answer",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "au12_prevalence",
+    "label": "AU12 (Lip Corner Puller) Prevalence",
+    "unit": "proportion",
+    "tier": "supplementary",
+    "lower_bound": 0.0,
+    "upper_bound": 1.0,
+    "presentation_multiplier": 100.0,
+    "window_variant": "full_answer",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "f0_median_st",
+    "label": "Median Fundamental Frequency F0 (semitones)",
+    "unit": "semitones",
+    "tier": "primary",
+    "lower_bound": null,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "answer_internal_v31",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "f0_iqr_st",
+    "label": "Fundamental Frequency F0 Interquartile Range (semitones)",
+    "unit": "semitones",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "answer_internal_v31",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "auto_silent_interval_proportion",
+    "label": "Automated Silent Interval Proportion (Pause Proxy)",
+    "unit": "proportion",
+    "tier": "exploratory",
+    "lower_bound": 0.0,
+    "upper_bound": 1.0,
+    "presentation_multiplier": 100.0,
+    "window_variant": "answer_internal_addon3_v1",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "auto_periodic_vocalization_proportion",
+    "label": "Automated Periodic Vocalization Proportion",
+    "unit": "proportion",
+    "tier": "exploratory",
+    "lower_bound": 0.0,
+    "upper_bound": 1.0,
+    "presentation_multiplier": 100.0,
+    "window_variant": "answer_internal_addon3_v1",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "jitter_local_pct",
+    "label": "Frame-Level Local Jitter Mean (%)",
+    "unit": "%",
+    "tier": "exploratory",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "answer_internal_addon3_v1",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "hnr",
+    "label": "Harmonics-to-Noise Ratio HNR (dB)",
+    "unit": "dB",
+    "tier": "supplementary",
+    "lower_bound": null,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "answer_internal_v31",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "nose_tip_temperature",
+    "label": "Nasal Tip Temperature (degC)",
+    "unit": "degC",
+    "tier": "primary",
+    "lower_bound": null,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "existing_selected_30_thermal_frames",
+    "scope_id": "independent_thermal79"
+  },
+  {
+    "feature_id": "left_cheek_temperature",
+    "label": "Left Cheek Temperature (degC)",
+    "unit": "degC",
+    "tier": "primary",
+    "lower_bound": null,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "existing_selected_30_thermal_frames",
+    "scope_id": "independent_thermal79"
+  },
+  {
+    "feature_id": "right_cheek_temperature",
+    "label": "Right Cheek Temperature (degC)",
+    "unit": "degC",
+    "tier": "primary",
+    "lower_bound": null,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "existing_selected_30_thermal_frames",
+    "scope_id": "independent_thermal79"
+  },
+  {
+    "feature_id": "mean_hr",
+    "label": "Mean Heart Rate from RR Intervals (bpm)",
+    "unit": "beats/min",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "full_response",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "rmssd",
+    "label": "Heart Rate Variability RMSSD (ms)",
+    "unit": "ms",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "full_response",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "sdnn",
+    "label": "Heart Rate Variability SDNN (ms)",
+    "unit": "ms",
+    "tier": "supplementary",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "full_response",
+    "scope_id": "specified_avrr92"
+  },
+  {
+    "feature_id": "sbp",
+    "label": "Systolic Blood Pressure SBP (mmHg)",
+    "unit": "mmHg",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "recorded_bp",
+    "scope_id": "study_main100"
+  },
+  {
+    "feature_id": "dbp",
+    "label": "Diastolic Blood Pressure DBP (mmHg)",
+    "unit": "mmHg",
+    "tier": "primary",
+    "lower_bound": 0.0,
+    "upper_bound": null,
+    "presentation_multiplier": 1.0,
+    "window_variant": "recorded_bp",
+    "scope_id": "study_main100"
+  }
+]

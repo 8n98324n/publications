@@ -1,0 +1,168 @@
+{
+  "feature_order": [
+    "smile_prevalence_score",
+    "smile_intensity_score",
+    "au05_prevalence",
+    "au07_prevalence",
+    "au12_prevalence",
+    "f0_median_st",
+    "f0_iqr_st",
+    "auto_silent_interval_proportion",
+    "auto_periodic_vocalization_proportion",
+    "jitter_local_pct",
+    "hnr",
+    "nose_tip_temperature",
+    "left_cheek_temperature",
+    "right_cheek_temperature",
+    "mean_hr",
+    "rmssd",
+    "sdnn",
+    "sbp",
+    "dbp"
+  ],
+  "correlation": {
+    "master_seed": 20260921,
+    "B_boot": 20000,
+    "B_perm": 20000,
+    "chunk": 256,
+    "max_degenerate_fraction": 0.1
+  },
+  "icc": {
+    "replicates": 20000,
+    "seed": 20260921
+  },
+  "ml": {
+    "feature_order": [
+      "smile_prevalence_score",
+      "smile_intensity_score",
+      "au05_prevalence",
+      "au07_prevalence",
+      "au12_prevalence",
+      "f0_median_st",
+      "f0_iqr_st",
+      "auto_silent_interval_proportion",
+      "auto_periodic_vocalization_proportion",
+      "jitter_local_pct",
+      "hnr",
+      "nose_tip_temperature",
+      "left_cheek_temperature",
+      "right_cheek_temperature",
+      "mean_hr",
+      "rmssd",
+      "sdnn",
+      "sbp",
+      "dbp"
+    ],
+    "class_mapping": {
+      "observation": 0,
+      "petting": 1,
+      "feeding": 2,
+      "combined": 3
+    },
+    "condition_factors": {
+      "observation": [
+        0,
+        0
+      ],
+      "petting": [
+        1,
+        0
+      ],
+      "feeding": [
+        0,
+        1
+      ],
+      "combined": [
+        1,
+        1
+      ]
+    },
+    "seed_rules": {
+      "split_base": 20260924,
+      "forest_base": 20270924,
+      "permutation_base": 20280924
+    },
+    "cv": {
+      "n_splits": 5,
+      "n_repeats": 10,
+      "stratify": "condition",
+      "sort_by": "participant_id"
+    },
+    "classifier_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "min_samples_split": 2,
+      "bootstrap": true,
+      "max_samples": null,
+      "oob_score": false,
+      "ccp_alpha": 0.0,
+      "warm_start": false,
+      "n_jobs": 1,
+      "criterion": "gini",
+      "max_features": "sqrt",
+      "class_weight": null
+    },
+    "regressor_params": {
+      "n_estimators": 500,
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "min_samples_split": 2,
+      "bootstrap": true,
+      "max_samples": null,
+      "oob_score": false,
+      "ccp_alpha": 0.0,
+      "warm_start": false,
+      "n_jobs": 1,
+      "criterion": "squared_error",
+      "max_features": 1.0
+    },
+    "imputer": {
+      "strategy": "median",
+      "add_indicator": false,
+      "fit_scope": "training_fold_only"
+    },
+    "permutation": {
+      "n_repeats": 10,
+      "implementation": "permute_training_median_imputed_test_column_only",
+      "bit_generator": "PCG64",
+      "seed_formula": "20280924+100000*task_code+1000*r+100*f+k",
+      "same_permutation_across_features": true,
+      "task_code": {
+        "classification": 1,
+        "regression": 2
+      },
+      "importance_aggregation": "complete_OOF_metric_difference_then_mean_shuffles_then_mean_and_sample_SD_across_repeats"
+    },
+    "basic_columns": [
+      "STAI_pre",
+      "Petting",
+      "Feeding",
+      "Petting_x_Feeding"
+    ],
+    "resource": {
+      "n_jobs": 1,
+      "threads": 1,
+      "max_heavy_jobs": 1
+    },
+    "models": [
+      "C_RF19",
+      "C_DUMMY",
+      "R_RF19",
+      "R_MEAN",
+      "R_BASIC",
+      "R_EXTENDED",
+      "C_RF19_CC",
+      "C_DUMMY_CC",
+      "R_RF19_CC",
+      "R_MEAN_CC"
+    ],
+    "sd_ddof": 1,
+    "performance_inference": "no_p_values_or_confidence_intervals"
+  },
+  "p_adjustment": "none_exploratory_raw_p",
+  "defaults": {
+    "threads": 1,
+    "processes": 1
+  }
+}

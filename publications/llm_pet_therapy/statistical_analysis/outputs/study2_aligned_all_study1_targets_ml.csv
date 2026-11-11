@@ -1,0 +1,50 @@
+target_code,target_label,model,MAE_mean,MAE_sd,RMSE_mean,RMSE_sd,R2_mean,R2_sd,r_mean,Imp_R2_mean
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",A1_Mean_Ref,6.171,0.041,7.775,0.042,-0.022,0.011,-0.188,-0.553
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",A2_MM_Only_Screened,6.238,0.123,7.83,0.129,-0.036,0.034,0.102,-0.576
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",B1_Pre_Only_Huber,4.002,0.051,5.235,0.07,0.537,0.013,0.736,0.296
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",B2_Passive_Pre_Plus_MM_Decoded,3.883,0.114,5.315,0.103,0.522,0.018,0.732,0.274
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",C1_Basic_2x2_Huber,3.914,0.098,5.162,0.112,0.55,0.02,0.746,0.315
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",C2_Basic_Dose_Huber,3.872,0.086,5.125,0.104,0.556,0.018,0.75,0.325
+STAI_Total,"State Anxiety Total (STAI-S, 20 items)",C3_TwoStage_Basic_Plus_MM_Resid,3.926,0.141,5.219,0.132,0.539,0.023,0.745,0.3
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",A1_Mean_Ref,4.405,0.016,5.46,0.022,-0.017,0.008,-0.168,-0.744
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",A2_MM_Only_Screened,4.598,0.103,5.703,0.105,-0.11,0.041,-0.014,-0.903
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",B1_Pre_Only_Huber,2.808,0.02,3.73,0.021,0.526,0.005,0.726,0.186
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",B2_Passive_Pre_Plus_MM_Decoded,2.928,0.061,3.846,0.068,0.495,0.018,0.709,0.134
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",C1_Basic_2x2_Huber,2.786,0.04,3.529,0.049,0.575,0.012,0.76,0.271
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",C2_Basic_Dose_Huber,2.754,0.043,3.493,0.055,0.584,0.013,0.765,0.286
+STAI_AA,"Calmness/Security Absence Subscale (STAI-AA, 10 items)",C3_TwoStage_Basic_Plus_MM_Resid,2.842,0.061,3.613,0.075,0.555,0.019,0.748,0.236
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",A1_Mean_Ref,3.31,0.026,4.341,0.034,-0.035,0.016,-0.241,-0.382
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",A2_MM_Only_Screened,3.387,0.063,4.503,0.08,-0.114,0.039,-0.056,-0.487
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",B1_Pre_Only_Huber,2.069,0.042,3.192,0.049,0.44,0.017,0.671,0.253
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",B2_Passive_Pre_Plus_MM_Decoded,2.173,0.036,3.338,0.053,0.388,0.02,0.642,0.183
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",C1_Basic_2x2_Huber,2.12,0.037,3.245,0.051,0.421,0.018,0.66,0.227
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",C2_Basic_Dose_Huber,2.096,0.03,3.225,0.049,0.429,0.018,0.665,0.237
+STAI_AP,"Acute Tension Presence Subscale (STAI-AP, 10 items)",C3_TwoStage_Basic_Plus_MM_Resid,2.217,0.052,3.382,0.08,0.372,0.03,0.633,0.161
+Mattering,"Situational Mattering (5 items, post-test)",A1_Mean_Ref,2.572,0.012,3.048,0.016,-0.016,0.01,-0.16,-0.016
+Mattering,"Situational Mattering (5 items, post-test)",A2_MM_Only_Screened,2.662,0.037,3.174,0.053,-0.102,0.037,0.01,-0.102
+Mattering,"Situational Mattering (5 items, post-test)",B1_Pre_Only_Huber,2.572,0.012,3.048,0.016,-0.016,0.01,-0.16,-0.016
+Mattering,"Situational Mattering (5 items, post-test)",B2_Passive_Pre_Plus_MM_Decoded,2.553,0.043,3.032,0.041,-0.006,0.027,0.171,-0.006
+Mattering,"Situational Mattering (5 items, post-test)",C1_Basic_2x2_Huber,2.123,0.041,2.609,0.048,0.256,0.028,0.509,0.256
+Mattering,"Situational Mattering (5 items, post-test)",C2_Basic_Dose_Huber,2.09,0.031,2.595,0.038,0.264,0.021,0.515,0.264
+Mattering,"Situational Mattering (5 items, post-test)",C3_TwoStage_Basic_Plus_MM_Resid,2.163,0.055,2.686,0.059,0.211,0.035,0.479,0.211
+GSE,"General Self-Efficacy (GSE, 10 items)",A1_Mean_Ref,4.52,0.033,5.672,0.036,-0.026,0.013,-0.207,-3.335
+GSE,"General Self-Efficacy (GSE, 10 items)",A2_MM_Only_Screened,4.82,0.112,6.06,0.196,-0.172,0.077,-0.191,-3.952
+GSE,"General Self-Efficacy (GSE, 10 items)",B1_Pre_Only_Huber,2.221,0.023,2.758,0.021,0.757,0.004,0.871,-0.025
+GSE,"General Self-Efficacy (GSE, 10 items)",B2_Passive_Pre_Plus_MM_Decoded,2.324,0.081,2.905,0.111,0.73,0.021,0.856,-0.139
+GSE,"General Self-Efficacy (GSE, 10 items)",C1_Basic_2x2_Huber,2.292,0.046,2.808,0.049,0.749,0.009,0.866,-0.062
+GSE,"General Self-Efficacy (GSE, 10 items)",C2_Basic_Dose_Huber,2.259,0.034,2.764,0.036,0.756,0.006,0.87,-0.029
+GSE,"General Self-Efficacy (GSE, 10 items)",C3_TwoStage_Basic_Plus_MM_Resid,2.365,0.088,2.952,0.109,0.722,0.021,0.851,-0.175
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",A1_Mean_Ref,6.5,0.046,7.78,0.06,-0.031,0.016,-0.228,-2.883
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",A2_MM_Only_Screened,6.596,0.202,8.053,0.176,-0.105,0.048,-0.01,-3.162
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",B1_Pre_Only_Huber,3.02,0.038,4.02,0.048,0.725,0.007,0.852,-0.037
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",B2_Passive_Pre_Plus_MM_Decoded,3.267,0.126,4.236,0.147,0.694,0.021,0.834,-0.152
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",C1_Basic_2x2_Huber,2.987,0.041,4.0,0.047,0.727,0.006,0.854,-0.027
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",C2_Basic_Dose_Huber,2.97,0.031,4.001,0.035,0.727,0.005,0.854,-0.027
+PANAS_PA,"Positive Affect (PANAS-PA, 10 items)",C3_TwoStage_Basic_Plus_MM_Resid,3.247,0.05,4.238,0.093,0.694,0.013,0.834,-0.153
+EmoStab,"Emotional Stability (TIPI, 2 items)",A1_Mean_Ref,1.844,0.017,2.207,0.015,-0.027,0.014,-0.212,-0.933
+EmoStab,"Emotional Stability (TIPI, 2 items)",A2_MM_Only_Screened,1.973,0.05,2.381,0.048,-0.196,0.048,-0.288,-1.25
+EmoStab,"Emotional Stability (TIPI, 2 items)",B1_Pre_Only_Huber,1.177,0.018,1.493,0.015,0.53,0.009,0.729,0.116
+EmoStab,"Emotional Stability (TIPI, 2 items)",B2_Passive_Pre_Plus_MM_Decoded,1.172,0.027,1.492,0.017,0.531,0.01,0.73,0.117
+EmoStab,"Emotional Stability (TIPI, 2 items)",C1_Basic_2x2_Huber,1.197,0.012,1.494,0.016,0.529,0.01,0.729,0.115
+EmoStab,"Emotional Stability (TIPI, 2 items)",C2_Basic_Dose_Huber,1.192,0.014,1.493,0.016,0.53,0.01,0.73,0.116
+EmoStab,"Emotional Stability (TIPI, 2 items)",C3_TwoStage_Basic_Plus_MM_Resid,1.179,0.028,1.486,0.034,0.534,0.021,0.732,0.124

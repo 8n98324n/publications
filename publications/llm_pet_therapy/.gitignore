@@ -1,0 +1,19 @@
+# Exclude local environment files, API keys, caches, and raw multimedia / PII files
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+temp/
+*.plk
+*.pkl
+*.mp4
+*.wav
+*.avi
+*.mov
+*.zip
+*.tar
+*.gz
+*.xlsx
+*.xls
+*.sav

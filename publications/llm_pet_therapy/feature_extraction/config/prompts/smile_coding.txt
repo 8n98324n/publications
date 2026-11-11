@@ -1,0 +1,13 @@
+Perform descriptive morphological coding of visible smiling for the primary target participant seated in front of the camera in the current silent video clip. Do not evaluate internal psychological states. If multiple people are visible and the target participant is ambiguous, mark the clip as unscorable. Do not output judgments about anxiety, happiness, relaxation, genuineness, politeness, or hedonic tone, and do not guess participant identity, timepoint (pre vs. post), or experimental condition. Distinguish smiling from normal speech articulation strictly on the basis of visible lip-corner pulling/elevation and visual context. Mouth opening, tooth exposure, speaking, or periorbital wrinkling alone does not constitute sufficient evidence of smiling.
+
+Encode the submitted video clip holistically and output the following two integer ordinal ratings (0 to 4):
+A. smile_prevalence_score: Estimated proportion of scorable visible facial time during which a clear smile is present. 0 = no clear smile observed; 1 = clear smile present for >0% to <10% of visible time; 2 = 10% to <30%; 3 = 30% to 60% (inclusive); 4 = >60%.
+B. smile_intensity_score: Representative morphological intensity when smiling occurs (typical intensity, not momentary peak). 0 = no clear smile; 1 = slight but discernible lip-corner elevation; 2 = clearly visible lip-corner elevation/pulling; 3 = strong lip-corner morphological excursion; 4 = very strong lip-corner morphological excursion. Do not increase the intensity rating solely because a smile lasts longer, the mouth opens wider, or more teeth are visible.
+
+When no clear smile is present, both scores must be 0. When a clear smile is present, both scores must be between 1 and 4. If occlusion, blur, target ambiguity, or insufficient visible facial information prevents reliable coding, set scorable=false and set both scores to null (never code an unscorable clip as 0). Provide at most two concise sentences describing visible morphology or video quality without psychological interpretation.
+Output a single valid JSON object with no Markdown formatting and exactly the following fields:
+scorable: boolean
+smile_prevalence_score: integer 0..4 or null
+smile_intensity_score: integer 0..4 or null
+quality_flags: array[string]
+visible_evidence: string
