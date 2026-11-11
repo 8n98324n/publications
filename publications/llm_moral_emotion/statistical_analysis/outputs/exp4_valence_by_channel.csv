@@ -1,0 +1,4 @@
+channel,measure,mean_SYMP,mean_INSP,n_SYMP,n_INSP,U,p
+text,positive minus negative cues,-0.92,1.3333333333333333,25,21,27.5,1.1651996350611531e-07
+nontext,positive minus negative cues,-0.36,0.5714285714285714,25,21,123.5,0.00017369931764107567
+physio,physiological cues cited,2.56,2.9523809523809526,25,21,224.0,0.3866227478800951

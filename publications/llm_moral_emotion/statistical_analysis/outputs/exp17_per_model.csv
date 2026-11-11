@@ -1,0 +1,8 @@
+model,n,accuracy,macro_f1,kappa,p_perm
+Claude Haiku 4.5,100,0.29,0.236,0.026,0.334
+Deepseek 4.1 Flash,100,0.25,0.194,-0.024,0.729
+GPT6 Luna,100,0.3,0.21,0.036,0.223
+Gemini 2.5 Flash,100,0.3,0.257,0.047,0.217
+Gemini 3.8 Flash,100,0.3,0.244,0.051,0.196
+Qwen 3.8 Flash,100,0.28,0.227,0.02,0.399
+Joint average,100,0.31,0.295,0.067,0.135

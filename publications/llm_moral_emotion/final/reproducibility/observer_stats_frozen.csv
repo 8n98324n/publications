@@ -1,0 +1,247 @@
+section,statistic,value,ci_lo,ci_hi,ci_type,n,manuscript_value,note,verdict
+sample,n valid pids in frozen snapshot,103.0,,,,,,,
+sample,"n scored by all 3 raters, silent",102.0,,,,,,,
+sample,"n scored by all 3 raters, audiovisual",101.0,,,,,,,
+sample,"n rating panel (all 3 raters, both versions)",101.0,,,,,101.0,,reproduced
+sample,n audiovisual complete-case consensus (both constructs),100.0,,,,,,rating panel minus [108],
+sample,n silent complete-case consensus (both constructs),100.0,,,,,,rating panel minus [63],
+sample,"n legacy classification panel (rating panel minus pids 32, 87)",99.0,,,,,99.0,"class counts {'CTRL': 27, 'SYMP': 25, 'INSP': 24, 'ELVT': 23}",reproduced
+sample,n complete-case both constructs both versions,99.0,,,,,,"class counts {'CTRL': 28, 'SYMP': 24, 'ELVT': 24, 'INSP': 23}",
+icc,"ICC(A,1) silent Sympathy",0.1851098285097371,0.0999617543496648,0.2691805909262411,bootstrap percentile,101.0,0.193,"analytic F-based CI [0.020, 0.360]; p=6.74e-08",reproduced at 2 dp
+icc,"ICC(A,k) silent Sympathy",0.4052850086366253,0.2499203164797718,0.5249363945805054,bootstrap percentile,101.0,0.418,"analytic F-based CI [0.050, 0.620]; p=6.74e-08",differs
+icc,"ICC(C,1) silent Sympathy",0.3201551222665086,0.1915709972893173,0.4334226598300745,bootstrap percentile,101.0,0.331,"analytic F-based CI [0.200, 0.450]; p=6.74e-08",differs
+icc_sensitivity,"ICC(A,k) silent Sympathy, all complete cases",0.4060152057245081,,,,102.0,,"ICC(A,1)=0.186",
+icc,"ICC(A,1) silent Inspiration",0.3900662672284208,0.2597224499366073,0.5071718817001439,bootstrap percentile,100.0,0.383,"analytic F-based CI [0.260, 0.510]; p=5.28e-12",differs
+icc,"ICC(A,k) silent Inspiration",0.6573661112498662,0.5127973701293858,0.7553406090584663,bootstrap percentile,100.0,0.651,"analytic F-based CI [0.520, 0.760]; p=5.28e-12",differs
+icc,"ICC(C,1) silent Inspiration",0.4141062237306421,0.278532424387763,0.5333063606190026,bootstrap percentile,100.0,0.405,"analytic F-based CI [0.290, 0.530]; p=5.28e-12",differs
+icc_sensitivity,"ICC(A,k) silent Inspiration, all complete cases",0.6528431557145545,,,,101.0,,"ICC(A,1)=0.385",
+icc,"ICC(A,1) audiovisual Sympathy",0.5781361382609661,0.4719875913015181,0.6684765399184605,bootstrap percentile,100.0,0.58,"analytic F-based CI [0.410, 0.700]; p=3.76e-28",reproduced at 2 dp
+icc,"ICC(A,k) audiovisual Sympathy",0.8043550128931303,0.7283852111384006,0.8581385895358743,bootstrap percentile,100.0,0.805,"analytic F-based CI [0.680, 0.880]; p=3.76e-28",reproduced at 2 dp
+icc,"ICC(C,1) audiovisual Sympathy",0.6377307956861481,0.5518115308843802,0.7097807762500327,bootstrap percentile,100.0,0.639,"analytic F-based CI [0.540, 0.730]; p=3.76e-28",reproduced at 2 dp
+icc_sensitivity,"ICC(A,k) audiovisual Sympathy, all complete cases",0.8043550128931303,,,,100.0,,"ICC(A,1)=0.578",
+icc,"ICC(A,1) audiovisual Inspiration",0.5345332495632337,0.4299197211044894,0.6304626080546238,bootstrap percentile,101.0,0.541,"analytic F-based CI [0.370, 0.660]; p=2.53e-24",differs
+icc,"ICC(A,k) audiovisual Inspiration",0.7750353840085467,0.6934787664220599,0.8365547920757072,bootstrap percentile,101.0,0.779,"analytic F-based CI [0.640, 0.860]; p=2.53e-24",reproduced at 2 dp
+icc,"ICC(C,1) audiovisual Inspiration",0.5944195050392043,0.4893937699457772,0.6877262621981214,bootstrap percentile,101.0,0.602,"analytic F-based CI [0.490, 0.690]; p=2.53e-24",differs
+icc_sensitivity,"ICC(A,k) audiovisual Inspiration, all complete cases",0.7750353840085467,,,,101.0,,"ICC(A,1)=0.535",
+icc_diff,"ICC(A,k) audiovisual minus silent Sympathy",0.4027452432567162,0.2674380575571722,0.5533952955321204,paired bootstrap percentile,100.0,,audiovisual 0.804 vs silent 0.402 on the common n,
+icc_diff,"ICC(A,1) audiovisual minus silent Sympathy",0.3953187030114399,0.2715734747462682,0.5089112679760933,paired bootstrap percentile,100.0,,,
+icc_diff,"ICC(A,k) audiovisual minus silent Inspiration",0.116388292837865,-0.0151479549615651,0.2676059288342767,paired bootstrap percentile,100.0,,audiovisual 0.774 vs silent 0.657 on the common n,
+icc_diff,"ICC(A,1) audiovisual minus silent Inspiration",0.142642232790629,-0.0185771834072786,0.2978448666557525,paired bootstrap percentile,100.0,,,
+icc_item,"ICC(A,1) silent SYM-F",0.1702313054499366,,,,101.0,0.177,"ICC(A,k)=0.381",differs
+icc_item,"ICC(A,1) silent SYM-V",-2.1900883884207192e-16,,,,101.0,-0.0,"ICC(A,k)=-0.000",reproduced
+icc_item,"ICC(A,1) silent SYM-L",-2.1900883884207192e-16,,,,101.0,-0.0,"ICC(A,k)=-0.000",reproduced
+icc_item,"ICC(A,1) silent SYM-B",0.0775257471409616,,,,101.0,0.08,"ICC(A,k)=0.201",reproduced at 2 dp
+icc_item,"ICC(A,1) silent INS-F",0.3918501278186882,,,,100.0,0.387,"ICC(A,k)=0.659",reproduced at 2 dp
+icc_item,"ICC(A,1) silent INS-V",,,,,101.0,,not estimable (all ratings identical),
+icc_item,"ICC(A,1) silent INS-L",,,,,101.0,,not estimable (all ratings identical),
+icc_item,"ICC(A,1) silent INS-B",0.1772853185595568,,,,100.0,0.177,"ICC(A,k)=0.393",reproduced
+icc_item,"ICC(A,1) audiovisual SYM-F",0.3549542146043672,,,,100.0,0.355,"ICC(A,k)=0.623",reproduced
+icc_item,"ICC(A,1) audiovisual SYM-V",0.4135630149111459,,,,100.0,0.414,"ICC(A,k)=0.679",reproduced
+icc_item,"ICC(A,1) audiovisual SYM-L",0.7205015361620859,,,,100.0,0.726,"ICC(A,k)=0.885",differs
+icc_item,"ICC(A,1) audiovisual SYM-B",0.1271297509829619,,,,100.0,0.127,"ICC(A,k)=0.304",reproduced
+icc_item,"ICC(A,1) audiovisual INS-F",0.4217982075744435,,,,101.0,0.428,"ICC(A,k)=0.686",differs
+icc_item,"ICC(A,1) audiovisual INS-V",0.2069554277498203,,,,101.0,0.211,"ICC(A,k)=0.439",reproduced at 2 dp
+icc_item,"ICC(A,1) audiovisual INS-L",0.6690967375006464,,,,101.0,0.675,"ICC(A,k)=0.858",differs
+icc_item,"ICC(A,1) audiovisual INS-B",0.3495522892380471,,,,101.0,0.35,"ICC(A,k)=0.617",reproduced
+manip_primary_n100,"observed Sympathy mean, high-symp cells",2.4404761904761902,,,,49.0,,SD 1.031,
+manip_primary_n100,"observed Sympathy mean, low-symp cells",1.1830065359477124,,,,51.0,,SD 0.423,
+manip_primary_n100,observed Sympathy Cohen d,1.6076251391819696,,,,100.0,,,
+manip_primary_n100,observed Sympathy Hedges g,1.5952904194440003,,,,100.0,,,
+manip_primary_n100,observed Sympathy Mann-Whitney U,2250.5,,,,100.0,,p=9.84e-13,
+manip_primary_n100,observed Sympathy Mann-Whitney p,9.842720278401177e-13,,,,100.0,,,
+manip_primary_n100,"ANOVA type II, Sympathy ~ C(symp_hi): F",70.81881252229175,,,,100.0,,"df=(1,96); p=3.73e-13; partial eta2=0.425",
+manip_primary_n100,"ANOVA type II, Sympathy ~ C(insp_hi): F",0.4009088912519586,,,,100.0,,"df=(1,96); p=5.28e-01; partial eta2=0.004",
+manip_primary_n100,"ANOVA type II, Sympathy ~ C(symp_hi):C(insp_hi): F",10.59109436300198,,,,100.0,,"df=(1,96); p=1.57e-03; partial eta2=0.099",
+manip_primary_n100,"cell mean observed Sympathy, ELVT",2.138888888888889,,,,24.0,,SE 0.220; SD 1.076,
+manip_primary_n100,"cell mean observed Sympathy, SYMP",2.73,,,,25.0,,SE 0.183; SD 0.915,
+manip_primary_n100,"cell mean observed Sympathy, INSP",1.3949275362318845,,,,23.0,,SE 0.118; SD 0.565,
+manip_primary_n100,"cell mean observed Sympathy, CTRL",1.0089285714285714,,,,28.0,,SE 0.007; SD 0.035,
+manip_primary_n100,"observed Inspiration mean, high-insp cells",2.202127659574468,,,,47.0,,SD 0.747,
+manip_primary_n100,"observed Inspiration mean, low-insp cells",1.1320754716981132,,,,53.0,,SD 0.406,
+manip_primary_n100,observed Inspiration Cohen d,1.8103395819050003,,,,100.0,,,
+manip_primary_n100,observed Inspiration Hedges g,1.796449508386548,,,,100.0,,,
+manip_primary_n100,observed Inspiration Mann-Whitney U,2303.0,,,,100.0,,p=1.88e-14,
+manip_primary_n100,observed Inspiration Mann-Whitney p,1.8834677100683505e-14,,,,100.0,,,
+manip_primary_n100,"ANOVA type II, Inspiration ~ C(symp_hi): F",3.9423209722234938,,,,100.0,,"df=(1,96); p=4.99e-02; partial eta2=0.039",
+manip_primary_n100,"ANOVA type II, Inspiration ~ C(insp_hi): F",94.57006230696216,,,,100.0,,"df=(1,96); p=5.81e-16; partial eta2=0.496",
+manip_primary_n100,"ANOVA type II, Inspiration ~ C(symp_hi):C(insp_hi): F",11.955246985929998,,,,100.0,,"df=(1,96); p=8.14e-04; partial eta2=0.111",
+manip_primary_n100,"cell mean observed Inspiration, ELVT",1.8958333333333333,,,,24.0,,SE 0.154; SD 0.756,
+manip_primary_n100,"cell mean observed Inspiration, SYMP",1.2066666666666666,,,,25.0,,SE 0.113; SD 0.564,
+manip_primary_n100,"cell mean observed Inspiration, INSP",2.5217391304347827,,,,23.0,,SE 0.125; SD 0.601,
+manip_primary_n100,"cell mean observed Inspiration, CTRL",1.0654761904761905,,,,28.0,,SE 0.030; SD 0.158,
+manip_legacy_n99,"observed Sympathy mean, high-symp cells",2.4600694444444446,,,,48.0,2.46,SD 1.033,reproduced
+manip_legacy_n99,"observed Sympathy mean, low-symp cells",1.1772875816993464,,,,51.0,1.18,SD 0.413,reproduced at 2 dp
+manip_legacy_n99,observed Sympathy Cohen d,1.64981598270087,,,,99.0,1.65,,reproduced
+manip_legacy_n99,observed Sympathy Hedges g,1.6370267115171424,,,,99.0,,,
+manip_legacy_n99,observed Sympathy Mann-Whitney U,2210.5,,,,99.0,,p=7.83e-13,
+manip_legacy_n99,observed Sympathy Mann-Whitney p,7.826055922928995e-13,,,,99.0,,,
+manip_legacy_n99,"ANOVA type II, Sympathy ~ C(symp_hi): F",72.79264409907417,,,,99.0,,"df=(1,95); p=2.25e-13; partial eta2=0.434",
+manip_legacy_n99,"ANOVA type II, Sympathy ~ C(insp_hi): F",0.3278792888477607,,,,99.0,,"df=(1,95); p=5.68e-01; partial eta2=0.003",
+manip_legacy_n99,"ANOVA type II, Sympathy ~ C(symp_hi):C(insp_hi): F",9.467801060341433,,,,99.0,,"df=(1,95); p=2.73e-03; partial eta2=0.091",
+manip_legacy_n99,"cell mean observed Sympathy, ELVT",2.1666666666666665,,,,23.0,2.17,SE 0.228; SD 1.092,reproduced at 2 dp
+manip_legacy_n99,"cell mean observed Sympathy, SYMP",2.73,,,,25.0,2.73,SE 0.183; SD 0.915,reproduced
+manip_legacy_n99,"cell mean observed Sympathy, INSP",1.3697916666666667,,,,24.0,1.37,SE 0.111; SD 0.545,reproduced
+manip_legacy_n99,"cell mean observed Sympathy, CTRL",1.0061728395061729,,,,27.0,1.01,SE 0.006; SD 0.032,reproduced at 2 dp
+manip_legacy_n99,"observed Inspiration mean, high-insp cells",2.2433510638297878,,,,47.0,2.24,SD 0.739,reproduced at 2 dp
+manip_legacy_n99,"observed Inspiration mean, low-insp cells",1.1314102564102564,,,,52.0,1.13,SD 0.410,reproduced at 2 dp
+manip_legacy_n99,observed Inspiration Cohen d,1.886743016490288,,,,99.0,1.89,,reproduced at 2 dp
+manip_legacy_n99,observed Inspiration Hedges g,1.8721171016337737,,,,99.0,,,
+manip_legacy_n99,observed Inspiration Mann-Whitney U,2291.0,,,,99.0,,p=4.50e-15,
+manip_legacy_n99,observed Inspiration Mann-Whitney p,4.496769643035273e-15,,,,99.0,,,
+manip_legacy_n99,"ANOVA type II, Inspiration ~ C(symp_hi): F",3.588126619348712,,,,99.0,,"df=(1,95); p=6.12e-02; partial eta2=0.036",
+manip_legacy_n99,"ANOVA type II, Inspiration ~ C(insp_hi): F",99.8630312627474,,,,99.0,,"df=(1,95); p=1.71e-16; partial eta2=0.512",
+manip_legacy_n99,"ANOVA type II, Inspiration ~ C(symp_hi):C(insp_hi): F",11.287733746020493,,,,99.0,,"df=(1,95); p=1.12e-03; partial eta2=0.106",
+manip_legacy_n99,"cell mean observed Inspiration, ELVT",1.934782608695652,,,,23.0,1.93,SE 0.156; SD 0.747,reproduced at 2 dp
+manip_legacy_n99,"cell mean observed Inspiration, SYMP",1.2066666666666666,,,,25.0,1.21,SE 0.113; SD 0.564,reproduced at 2 dp
+manip_legacy_n99,"cell mean observed Inspiration, INSP",2.5390625,,,,24.0,2.54,SE 0.124; SD 0.609,reproduced at 2 dp
+manip_legacy_n99,"cell mean observed Inspiration, CTRL",1.0617283950617282,,,,27.0,1.06,SE 0.031; SD 0.159,reproduced at 2 dp
+classification_primary,Exp 15 audiovisual four-class accuracy,0.73,0.64,0.82,bootstrap percentile,100.0,,permutation p=0.0001; permutation-null mean 0.254,
+classification_primary,Exp 15 audiovisual macro-F1,0.7013016456582633,0.6061828702104634,0.7870631293785575,bootstrap percentile,100.0,,permutation p=0.0001,
+classification_primary,Exp 15 audiovisual Cohen kappa,0.6379240981628,0.5216617924882412,0.749791492910759,bootstrap percentile,100.0,,,
+classification_primary,Exp 15 audiovisual sympathy-axis accuracy,0.8,,,,100.0,,,
+classification_primary,Exp 15 audiovisual inspiration-axis accuracy,0.83,,,,100.0,,,
+classification_primary,Exp 15 audiovisual recall ELVT,0.3333333333333333,,,,24.0,,8 of 24,
+classification_primary,Exp 15 audiovisual recall SYMP,0.8,,,,25.0,,20 of 25,
+classification_primary,Exp 15 audiovisual recall INSP,0.782608695652174,,,,23.0,,18 of 23,
+classification_primary,Exp 15 audiovisual recall CTRL,0.9642857142857144,,,,28.0,,27 of 28,
+classification_primary,Exp 15 audiovisual Rater A four-class accuracy,0.66,,,,100.0,,macro-F1 0.606; kappa 0.543,
+classification_primary,Exp 15 audiovisual Rater B four-class accuracy,0.66,,,,100.0,,macro-F1 0.623; kappa 0.543,
+classification_primary,Exp 15 audiovisual Rater C four-class accuracy,0.72,,,,100.0,,macro-F1 0.695; kappa 0.626,
+classification_primary,Exp 14 silent four-class accuracy,0.31,0.22,0.41,bootstrap percentile,100.0,,permutation p=0.1226; permutation-null mean 0.256,
+classification_primary,Exp 14 silent macro-F1,0.3032606542836721,0.207761562998405,0.3951123663509938,bootstrap percentile,100.0,,permutation p=0.0699,
+classification_primary,Exp 14 silent Cohen kappa,0.0735767991407088,-0.0485654876700241,0.1999999999999999,bootstrap percentile,100.0,,,
+classification_primary,Exp 14 silent sympathy-axis accuracy,0.58,,,,100.0,,,
+classification_primary,Exp 14 silent inspiration-axis accuracy,0.5,,,,100.0,,,
+classification_primary,Exp 14 silent recall ELVT,0.1666666666666666,,,,24.0,,4 of 24,
+classification_primary,Exp 14 silent recall SYMP,0.4166666666666667,,,,24.0,,10 of 24,
+classification_primary,Exp 14 silent recall INSP,0.2916666666666667,,,,24.0,,7 of 24,
+classification_primary,Exp 14 silent recall CTRL,0.3571428571428571,,,,28.0,,10 of 28,
+classification_primary,Exp 14 silent Rater A four-class accuracy,0.26,,,,100.0,,macro-F1 0.256; kappa 0.003,
+classification_primary,Exp 14 silent Rater B four-class accuracy,0.29,,,,100.0,,macro-F1 0.263; kappa 0.046,
+classification_primary,Exp 14 silent Rater C four-class accuracy,0.26,,,,100.0,,macro-F1 0.256; kappa 0.012,
+classification_legacy_n99,Exp 15 audiovisual four-class accuracy,0.7373737373737373,0.6464646464646465,0.8181818181818182,bootstrap percentile,99.0,0.737,permutation p=0.0001; permutation-null mean 0.254,reproduced
+classification_legacy_n99,Exp 15 audiovisual macro-F1,0.7095325519867468,0.6141089425926236,0.7935491989465008,bootstrap percentile,99.0,0.71,permutation p=0.0001,reproduced
+classification_legacy_n99,Exp 15 audiovisual Cohen kappa,0.6477832512315271,0.5322986250527136,0.7548173164344995,bootstrap percentile,99.0,,,
+classification_legacy_n99,Exp 15 audiovisual sympathy-axis accuracy,0.8080808080808081,,,,99.0,0.808,,reproduced
+classification_legacy_n99,Exp 15 audiovisual inspiration-axis accuracy,0.8383838383838383,,,,99.0,0.838,,reproduced
+classification_legacy_n99,Exp 15 audiovisual recall ELVT,0.3478260869565217,,,,23.0,,8 of 23,
+classification_legacy_n99,Exp 15 audiovisual recall SYMP,0.8,,,,25.0,,20 of 25,
+classification_legacy_n99,Exp 15 audiovisual recall INSP,0.7916666666666666,,,,24.0,,19 of 24,
+classification_legacy_n99,Exp 15 audiovisual recall CTRL,0.9629629629629628,,,,27.0,,26 of 27,
+classification_legacy_n99,Exp 15 audiovisual Rater A four-class accuracy,0.6262626262626263,,,,99.0,0.62,macro-F1 0.567; kappa 0.496,differs
+classification_legacy_n99,Exp 15 audiovisual Rater B four-class accuracy,0.6666666666666666,,,,99.0,0.667,macro-F1 0.631; kappa 0.552,reproduced
+classification_legacy_n99,Exp 15 audiovisual Rater C four-class accuracy,0.7448979591836735,,,,98.0,0.745,macro-F1 0.717; kappa 0.658,reproduced
+classification_legacy_n99,Exp 14 silent four-class accuracy,0.303030303030303,0.2121212121212121,0.3939393939393939,bootstrap percentile,99.0,0.303,permutation p=0.1590; permutation-null mean 0.256,reproduced
+classification_legacy_n99,Exp 14 silent macro-F1,0.2979792383050361,0.2057498489029322,0.3885128319683502,bootstrap percentile,99.0,0.298,permutation p=0.0921,reproduced
+classification_legacy_n99,Exp 14 silent Cohen kappa,0.0636052090472925,-0.0539325253197566,0.1862282711224901,bootstrap percentile,99.0,,,
+classification_legacy_n99,Exp 14 silent sympathy-axis accuracy,0.5656565656565656,,,,99.0,0.576,,differs
+classification_legacy_n99,Exp 14 silent inspiration-axis accuracy,0.494949494949495,,,,99.0,0.485,,differs
+classification_legacy_n99,Exp 14 silent recall ELVT,0.1739130434782608,,,,23.0,,4 of 23,
+classification_legacy_n99,Exp 14 silent recall SYMP,0.4,,,,25.0,,10 of 25,
+classification_legacy_n99,Exp 14 silent recall INSP,0.2916666666666667,,,,24.0,,7 of 24,
+classification_legacy_n99,Exp 14 silent recall CTRL,0.3333333333333333,,,,27.0,,9 of 27,
+classification_legacy_n99,Exp 14 silent Rater A four-class accuracy,0.2551020408163265,,,,98.0,,macro-F1 0.254; kappa -0.003,
+classification_legacy_n99,Exp 14 silent Rater B four-class accuracy,0.2828282828282828,,,,99.0,,macro-F1 0.256; kappa 0.036,
+classification_legacy_n99,Exp 14 silent Rater C four-class accuracy,0.2626262626262626,,,,99.0,,macro-F1 0.258; kappa 0.014,
+sensitivity,Exp 15 audiovisual four-class accuracy excluding pid 43,0.7373737373737373,,,,99.0,,macro-F1 0.709,
+sensitivity,Exp 14 silent four-class accuracy excluding pid 43,0.3131313131313131,,,,99.0,,macro-F1 0.306,
+spearman_silent,rho Sympathy consensus vs Exp 1: vision only,0.3108519998389745,0.1169074701016024,0.4766304745786834,bootstrap percentile,94.0,,p=2.29e-03,
+spearman_silent,rho Inspiration consensus vs Exp 1: vision only,0.1715790757190133,0.0334887179826354,0.3055159562394876,bootstrap percentile,94.0,,p=9.82e-02,
+spearman_silent,rho Sympathy consensus vs Exp 2: vision+audio,0.2973107224096943,0.08473266601278,0.4944322773726671,bootstrap percentile,98.0,,p=2.95e-03,
+spearman_silent,rho Inspiration consensus vs Exp 2: vision+audio,0.3798419194873768,0.2003231799314241,0.5424949528345896,bootstrap percentile,98.0,,p=1.14e-04,
+spearman_silent,rho Sympathy consensus vs Exp 3: +text,0.2403173303418513,0.0349067904778919,0.4306540464996609,bootstrap percentile,98.0,,p=1.71e-02,
+spearman_silent,rho Inspiration consensus vs Exp 3: +text,0.0042285888460501,-0.187044403583912,0.1991022881985342,bootstrap percentile,98.0,,p=9.67e-01,
+spearman_silent,rho Sympathy consensus vs Exp 4: +physiology,0.2631086394610823,0.0679353329649142,0.4481381234990558,bootstrap percentile,98.0,,p=8.86e-03,
+spearman_silent,rho Inspiration consensus vs Exp 4: +physiology,-0.0478476211296447,-0.2324549381055541,0.1403045537810241,bootstrap percentile,98.0,,p=6.40e-01,
+spearman_silent,rho Sympathy consensus vs Exp 5: CoT,0.2434244782401164,0.0358441793284353,0.4382598093891699,bootstrap percentile,98.0,,p=1.57e-02,
+spearman_silent,rho Inspiration consensus vs Exp 5: CoT,0.219999108789076,0.0272354334271403,0.4071087977483066,bootstrap percentile,98.0,,p=2.95e-02,
+spearman_silent,rho Sympathy consensus vs Exp 6: knowledge inj.,0.2710342538882142,0.0650965611902715,0.4644591700714289,bootstrap percentile,98.0,,p=6.95e-03,
+spearman_silent,rho Inspiration consensus vs Exp 6: knowledge inj.,0.0863711619335994,-0.1146140675990964,0.2818408186419156,bootstrap percentile,98.0,,p=3.98e-01,
+spearman_silent,rho Sympathy consensus vs Exp 7: few-shot,0.1782727710162018,-0.0331661791981569,0.3745454307555667,bootstrap percentile,98.0,,p=7.90e-02,
+spearman_silent,rho Inspiration consensus vs Exp 7: few-shot,0.0951559940092435,-0.0951042390105419,0.2852603763311854,bootstrap percentile,98.0,,p=3.51e-01,
+spearman_silent,rho Sympathy consensus vs Exp 8: fine-tuned,0.2588925932159232,0.0572358205744091,0.4475752130281907,bootstrap percentile,98.0,,p=1.01e-02,
+spearman_silent,rho Inspiration consensus vs Exp 8: fine-tuned,0.0598308024647109,-0.1393555727971039,0.2540549990908923,bootstrap percentile,98.0,,p=5.58e-01,
+spearman_silent,rho Sympathy consensus vs Exp 9: agentic,0.2638016027002564,0.0509846983118379,0.4608506531300874,bootstrap percentile,97.0,,p=9.03e-03,
+spearman_silent,rho Inspiration consensus vs Exp 9: agentic,0.0784937664427904,-0.119729616278937,0.2724172255239986,bootstrap percentile,97.0,,p=4.45e-01,
+spearman_silent,rho Inspiration consensus vs Exp 10,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 10,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 11,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 11,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 12,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 12,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 13,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Inspiration consensus vs Exp 13,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_silent,rho Sympathy consensus vs Exp 16: V+A+P control,0.2058088320284944,0.0044762712183408,0.396623149703407,bootstrap percentile,98.0,,p=4.20e-02,
+spearman_silent,rho Inspiration consensus vs Exp 16: V+A+P control,0.2244341719943859,0.0308528198685656,0.4043160449391306,bootstrap percentile,98.0,,p=2.63e-02,
+spearman_audiovisual,rho Sympathy consensus vs Exp 1: vision only,0.1653342008622184,-0.0535862479953401,0.3788726391346946,bootstrap percentile,94.0,0.15,p=1.11e-01,differs
+spearman_audiovisual,rho Inspiration consensus vs Exp 1: vision only,0.282946208795175,0.151339958927403,0.4245277494598896,bootstrap percentile,94.0,0.28,p=5.72e-03,reproduced at 2 dp
+spearman_audiovisual,rho Sympathy consensus vs Exp 2: vision+audio,0.6948823010984061,0.5607213833742543,0.7991280574949474,bootstrap percentile,98.0,0.69,p=2.07e-15,reproduced at 2 dp
+spearman_audiovisual,rho Inspiration consensus vs Exp 2: vision+audio,0.4876178908635765,0.3055208316134872,0.6483885399933123,bootstrap percentile,98.0,0.47,p=3.54e-07,differs
+spearman_audiovisual,rho Sympathy consensus vs Exp 3: +text,0.7377933006444425,0.6123586134056793,0.8364011445469227,bootstrap percentile,98.0,0.73,p=4.50e-18,differs
+spearman_audiovisual,rho Inspiration consensus vs Exp 3: +text,0.7100140623877201,0.5819290162313008,0.8126684455255309,bootstrap percentile,98.0,0.71,p=2.71e-16,reproduced
+spearman_audiovisual,rho Sympathy consensus vs Exp 4: +physiology,0.7586392049406582,0.6594321564079055,0.8347773147907583,bootstrap percentile,98.0,0.76,p=1.46e-19,reproduced at 2 dp
+spearman_audiovisual,rho Inspiration consensus vs Exp 4: +physiology,0.7231493880002083,0.600081007429914,0.8188591119422713,bootstrap percentile,98.0,0.72,p=4.15e-17,reproduced at 2 dp
+spearman_audiovisual,rho Sympathy consensus vs Exp 5: CoT,0.8046123614149048,0.7079314661557652,0.8736341074896997,bootstrap percentile,98.0,0.8,p=1.87e-23,reproduced at 2 dp
+spearman_audiovisual,rho Inspiration consensus vs Exp 5: CoT,0.7506343753560801,0.6336826180254251,0.8389647553786298,bootstrap percentile,98.0,0.75,p=5.65e-19,reproduced at 2 dp
+spearman_audiovisual,rho Sympathy consensus vs Exp 6: knowledge inj.,0.8359093701766811,0.7495460175587253,0.8983437598335641,bootstrap percentile,98.0,0.83,p=9.43e-27,differs
+spearman_audiovisual,rho Inspiration consensus vs Exp 6: knowledge inj.,0.798498539356924,0.7133578014193854,0.8640817618526575,bootstrap percentile,98.0,0.8,p=7.01e-23,reproduced at 2 dp
+spearman_audiovisual,rho Sympathy consensus vs Exp 7: few-shot,0.6072333097706573,0.4449598018769675,0.73763171147341,bootstrap percentile,98.0,0.6,p=3.38e-11,differs
+spearman_audiovisual,rho Inspiration consensus vs Exp 7: few-shot,0.6711963611901999,0.5423159324025775,0.7751939883848079,bootstrap percentile,98.0,0.67,p=3.94e-14,reproduced at 2 dp
+spearman_audiovisual,rho Sympathy consensus vs Exp 8: fine-tuned,0.7729241741726308,0.6711010248101191,0.8490740003146008,bootstrap percentile,98.0,0.77,p=1.13e-20,reproduced at 2 dp
+spearman_audiovisual,rho Inspiration consensus vs Exp 8: fine-tuned,0.7619642348693285,0.6590872833998572,0.8433445808557932,bootstrap percentile,98.0,0.76,p=8.15e-20,reproduced at 2 dp
+spearman_audiovisual,rho Sympathy consensus vs Exp 9: agentic,0.8539961174140768,0.7811194328920551,0.9070491948744578,bootstrap percentile,97.0,0.85,p=1.05e-28,reproduced at 2 dp
+spearman_audiovisual,rho Inspiration consensus vs Exp 9: agentic,0.7797341549345225,0.6695685717049827,0.8697403866403405,bootstrap percentile,97.0,0.78,p=5.00e-21,reproduced
+spearman_audiovisual,rho Inspiration consensus vs Exp 10,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 10,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 11,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 11,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 12,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 12,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 13,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Inspiration consensus vs Exp 13,,,,,0.0,,not computable: no continuous scores for this experiment in the frozen snapshot,
+spearman_audiovisual,rho Sympathy consensus vs Exp 16: V+A+P control,0.4955723838744237,0.3323401536512513,0.636476984469253,bootstrap percentile,98.0,0.47,p=2.12e-07,differs
+spearman_audiovisual,rho Inspiration consensus vs Exp 16: V+A+P control,0.5692005378452017,0.4072890955317629,0.7057303959306584,bootstrap percentile,98.0,0.57,p=9.62e-10,reproduced at 2 dp
+fourth_rater,Sympathy common sample n (3 humans + Exp 9),97.0,,,,,,"audiovisual complete cases 100 minus pids absent from Exp 9: [32, 87, 103]",
+fourth_rater,"Sympathy 3 humans, raw ICC(A,1)",0.5815410541520591,0.4747746899897258,0.671548720742569,bootstrap percentile,97.0,0.582,"ICC(C,1)=0.638",reproduced
+fourth_rater,"Sympathy 3 humans, raw ICC(A,k)",0.8065450478086487,0.7305914301794267,0.8598217576960934,bootstrap percentile,97.0,,,
+fourth_rater,"Sympathy 3 humans + model, raw ICC(A,1)",0.3308893260591802,0.2635804464537973,0.398999857498729,bootstrap percentile,97.0,0.333,"ICC(C,1)=0.461",reproduced at 2 dp
+fourth_rater,"Sympathy 3 humans + model, raw ICC(A,k)",0.6642136666677523,0.5887627445874805,0.726445034278971,bootstrap percentile,97.0,,,
+fourth_rater,"Sympathy 3 humans, standardized ICC(A,1)",0.688778831048113,0.6086314874860947,0.7523822552916746,bootstrap percentile,97.0,0.691,"ICC(C,1)=0.687",reproduced at 2 dp
+fourth_rater,"Sympathy 3 humans, standardized ICC(A,k)",0.8691004748639862,0.8234902591609038,0.9011413071081686,bootstrap percentile,97.0,0.87,,reproduced at 2 dp
+fourth_rater,"Sympathy 3 humans + model, standardized ICC(A,1)",0.6947018750393147,0.6267492683965505,0.7479044525901843,bootstrap percentile,97.0,0.696,"ICC(C,1)=0.692",differs
+fourth_rater,"Sympathy 3 humans + model, standardized ICC(A,k)",0.9010091864318006,0.8704102016040772,0.9222818049530188,bootstrap percentile,97.0,0.901,,reproduced
+fourth_rater,Sympathy model (Exp 9) mean on common sample,4.252577319587629,,,,97.0,4.12,SD 3.431,differs
+fourth_rater,Sympathy Rater A mean on common sample,1.5541237113402062,,,,97.0,,SD 1.045,
+fourth_rater,Sympathy Rater B mean on common sample,1.649484536082474,,,,97.0,,SD 0.927,
+fourth_rater,Sympathy Rater C mean on common sample,2.237113402061856,,,,97.0,,SD 1.454,
+pairwise_rho,Sympathy Rater A vs Rater B (human-human),0.7128318001691909,,,,97.0,,p=2.62e-16,
+pairwise_rho,Sympathy Rater A vs Rater C (human-human),0.7600924183371004,,,,97.0,,p=1.75e-19,
+pairwise_rho,Sympathy Rater A vs Model (Exp 9) (human-model),0.7609537198026022,,,,97.0,,p=1.51e-19,
+pairwise_rho,Sympathy Rater B vs Rater C (human-human),0.7239402146499827,,,,97.0,,p=5.38e-17,
+pairwise_rho,Sympathy Rater B vs Model (Exp 9) (human-model),0.7455280128378226,,,,97.0,,p=1.97e-18,
+pairwise_rho,Sympathy Rater C vs Model (Exp 9) (human-model),0.8055196297976159,,,,97.0,,p=2.59e-23,
+pairwise_rho,Sympathy mean human-human rho,0.7322881443854247,,,,97.0,0.737,range 0.713 to 0.760,differs
+pairwise_rho,Sympathy mean human-model rho,0.7706671208126803,,,,97.0,0.763,range 0.746 to 0.806,differs
+pairwise_rho,Sympathy mean human-model minus mean human-human rho,0.0383789764272556,-0.019408675247369,0.0977992384103505,bootstrap percentile,97.0,,,
+fourth_rater,Inspiration common sample n (3 humans + Exp 9),98.0,,,,,,"audiovisual complete cases 101 minus pids absent from Exp 9: [32, 87, 103]",
+fourth_rater,"Inspiration 3 humans, raw ICC(A,1)",0.5346091302710434,0.4271406427566663,0.6321032115348565,bootstrap percentile,98.0,0.544,"ICC(C,1)=0.594",differs
+fourth_rater,"Inspiration 3 humans, raw ICC(A,k)",0.7750885546471858,0.6910612420116601,0.8375162330048805,bootstrap percentile,98.0,,,
+fourth_rater,"Inspiration 3 humans + model, raw ICC(A,1)",0.2519761107204799,0.1963406927336452,0.3110255766501687,bootstrap percentile,98.0,0.254,"ICC(C,1)=0.361",reproduced at 2 dp
+fourth_rater,"Inspiration 3 humans + model, raw ICC(A,k)",0.5740008999349372,0.4942428312119948,0.6435866136738075,bootstrap percentile,98.0,,,
+fourth_rater,"Inspiration 3 humans, standardized ICC(A,1)",0.6533821623733209,0.5307538031776874,0.756757565880135,bootstrap percentile,98.0,0.666,"ICC(C,1)=0.651",differs
+fourth_rater,"Inspiration 3 humans, standardized ICC(A,k)",0.8497385129862588,0.7723771693137177,0.903226190665681,bootstrap percentile,98.0,0.857,,differs
+fourth_rater,"Inspiration 3 humans + model, standardized ICC(A,1)",0.6419421016107157,0.5397011751903785,0.728032910263959,bootstrap percentile,98.0,0.648,"ICC(C,1)=0.640",differs
+fourth_rater,"Inspiration 3 humans + model, standardized ICC(A,k)",0.8776216148587037,0.8242532911159934,0.9145858489227608,bootstrap percentile,98.0,0.881,,reproduced at 2 dp
+fourth_rater,Inspiration model (Exp 9) mean on common sample,4.061224489795919,,,,98.0,,SD 3.324,
+fourth_rater,Inspiration Rater A mean on common sample,1.5178571428571428,,,,98.0,,SD 0.779,
+fourth_rater,Inspiration Rater B mean on common sample,1.4387755102040816,,,,98.0,,SD 0.702,
+fourth_rater,Inspiration Rater C mean on common sample,2.0331632653061225,,,,98.0,,SD 1.273,
+pairwise_rho,Inspiration Rater A vs Rater B (human-human),0.6987054446324769,,,,98.0,,p=1.25e-15,
+pairwise_rho,Inspiration Rater A vs Rater C (human-human),0.7259546690694153,,,,98.0,,p=2.74e-17,
+pairwise_rho,Inspiration Rater A vs Model (Exp 9) (human-model),0.6561107413159688,,,,98.0,,p=2.25e-13,
+pairwise_rho,Inspiration Rater B vs Rater C (human-human),0.7267142511083363,,,,98.0,,p=2.45e-17,
+pairwise_rho,Inspiration Rater B vs Model (Exp 9) (human-model),0.7055274913906625,,,,98.0,,p=5.01e-16,
+pairwise_rho,Inspiration Rater C vs Model (Exp 9) (human-model),0.6999528583532492,,,,98.0,,p=1.06e-15,
+pairwise_rho,Inspiration mean human-human rho,0.7171247882700761,,,,98.0,0.724,range 0.699 to 0.727,reproduced at 2 dp
+pairwise_rho,Inspiration mean human-model rho,0.6871970303532935,,,,98.0,0.685,range 0.656 to 0.706,differs
+pairwise_rho,Inspiration mean human-model minus mean human-human rho,-0.0299277579167825,-0.1375507103398874,0.0680001562314915,bootstrap percentile,98.0,,,

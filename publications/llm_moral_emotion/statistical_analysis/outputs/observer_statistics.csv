@@ -1,0 +1,51 @@
+section,statistic,value,ci_lo,ci_hi,n
+icc,"ICC(A,1) silent Sympathy",0.18510982850973715,0.09996175434966484,0.2691805909262411,101
+icc,"ICC(A,k) silent Sympathy",0.4052850086366253,0.24992031647977186,0.5249363945805054,101
+icc,"ICC(C,1) silent Sympathy",0.32015512226650866,0.1915709972893173,0.4334226598300745,101
+icc,"ICC(A,1) silent Inspiration",0.3900662672284207,0.25972244993660737,0.5071718817001439,100
+icc,"ICC(A,k) silent Inspiration",0.6573661112498662,0.5127973701293858,0.7553406090584663,100
+icc,"ICC(C,1) silent Inspiration",0.41410622373064204,0.278532424387763,0.5333063606190026,100
+icc,"ICC(A,1) audiovisual Sympathy",0.5781361382609661,0.4719875913015181,0.6684765399184605,100
+icc,"ICC(A,k) audiovisual Sympathy",0.8043550128931303,0.7283852111384006,0.8581385895358743,100
+icc,"ICC(C,1) audiovisual Sympathy",0.6377307956861481,0.5518115308843802,0.7097807762500327,100
+icc,"ICC(A,1) audiovisual Inspiration",0.5345332495632337,0.4299197211044894,0.6304626080546238,101
+icc,"ICC(A,k) audiovisual Inspiration",0.7750353840085467,0.6934787664220599,0.8365547920757072,101
+icc,"ICC(C,1) audiovisual Inspiration",0.5944195050392043,0.48939376994577727,0.6877262621981214,101
+icc_diff,"ICC(A,k) audiovisual minus silent Sympathy",0.40274524325671623,0.2674380575571722,0.5533952955321204,100
+icc_diff,"ICC(A,1) audiovisual minus silent Sympathy",0.3953187030114399,0.27157347474626825,0.5089112679760933,100
+icc_diff,"ICC(A,k) audiovisual minus silent Inspiration",0.116388292837865,-0.015147954961565185,0.26760592883427675,100
+icc_diff,"ICC(A,1) audiovisual minus silent Inspiration",0.1426422327906291,-0.018577183407278677,0.2978448666557525,100
+manip_primary_n100,"SYM audiovisual consensus, high vs low S_hi: Mann-Whitney U",2250.5,,,100
+manip_primary_n100,"SYM audiovisual consensus, high vs low S_hi: Cohen d",1.60762513918197,,,100
+manip_primary_n100,"SYM audiovisual consensus, high vs low S_hi: Hedges g",1.595290419444001,,,100
+manip_primary_n100,"INS audiovisual consensus, high vs low I_hi: Mann-Whitney U",2303.0,,,100
+manip_primary_n100,"INS audiovisual consensus, high vs low I_hi: Cohen d",1.8103395819050005,,,100
+manip_primary_n100,"INS audiovisual consensus, high vs low I_hi: Hedges g",1.796449508386548,,,100
+spearman_audiovisual,rho Exp 1 Sympathy,0.16533420086221845,-0.05358624799534018,0.37887263913469466,94
+spearman_audiovisual,rho Exp 1 Inspiration,0.28294620879517507,0.15133995892740307,0.4245277494598896,94
+spearman_audiovisual,rho Exp 2 Sympathy,0.6948823010984061,0.5607213833742543,0.7991280574949474,98
+spearman_audiovisual,rho Exp 2 Inspiration,0.4876178908635766,0.30552083161348725,0.6483885399933123,98
+spearman_audiovisual,rho Exp 3 Sympathy,0.7377933006444425,0.6123586134056793,0.8364011445469227,98
+spearman_audiovisual,rho Exp 3 Inspiration,0.7100140623877201,0.5819290162313008,0.8126684455255309,98
+spearman_audiovisual,rho Exp 4 Sympathy,0.7586392049406582,0.6594321564079055,0.8347773147907583,98
+spearman_audiovisual,rho Exp 4 Inspiration,0.7231493880002083,0.600081007429914,0.8188591119422713,98
+spearman_audiovisual,rho Exp 5 Sympathy,0.8046123614149048,0.7079314661557652,0.8736341074896997,98
+spearman_audiovisual,rho Exp 5 Inspiration,0.7506343753560801,0.6336826180254251,0.8389647553786298,98
+spearman_audiovisual,rho Exp 6 Sympathy,0.8359093701766812,0.7495460175587253,0.8983437598335641,98
+spearman_audiovisual,rho Exp 6 Inspiration,0.7984985393569239,0.7133578014193854,0.8640817618526575,98
+spearman_audiovisual,rho Exp 7 Sympathy,0.6072333097706573,0.4449598018769675,0.73763171147341,98
+spearman_audiovisual,rho Exp 7 Inspiration,0.6711963611901999,0.5423159324025775,0.7751939883848079,98
+spearman_audiovisual,rho Exp 8 Sympathy,0.7729241741726307,0.6711010248101191,0.8490740003146008,98
+spearman_audiovisual,rho Exp 8 Inspiration,0.7619642348693285,0.6590872833998572,0.8433445808557932,98
+spearman_audiovisual,rho Exp 9 Sympathy,0.8539961174140769,0.7811194328920551,0.9070491948744578,97
+spearman_audiovisual,rho Exp 9 Inspiration,0.7797341549345224,0.6695685717049827,0.8697403866403405,97
+spearman_audiovisual,rho Exp 16 Sympathy,0.4955723838744237,0.33234015365125136,0.636476984469253,98
+spearman_audiovisual,rho Exp 16 Inspiration,0.5692005378452017,0.40728909553176296,0.7057303959306584,98
+classification_primary,Exp 14 silent four-class accuracy,0.31,,,100
+classification_primary,Exp 14 silent Rater A four-class accuracy,0.26,,,100
+classification_primary,Exp 14 silent Rater B four-class accuracy,0.29,,,100
+classification_primary,Exp 14 silent Rater C four-class accuracy,0.26,,,100
+classification_primary,Exp 15 audiovisual four-class accuracy,0.73,,,100
+classification_primary,Exp 15 audiovisual Rater A four-class accuracy,0.66,,,100
+classification_primary,Exp 15 audiovisual Rater B four-class accuracy,0.66,,,100
+classification_primary,Exp 15 audiovisual Rater C four-class accuracy,0.72,,,100

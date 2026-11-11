@@ -1,0 +1,29 @@
+{
+ "model": "claude-sonnet-5",
+ "system_prompt": "You are coding a model-generated explanation of a person's emotional state. Identify which observable cues the explanation cites as EVIDENCE (regardless of the explanation's conclusion). Return ONLY a JSON object with exactly these 20 keys, each 1 (cited) or 0 (not cited):\ntext_sad (spoken content expresses sadness/distress), text_anger (anger/indignation in speech), text_touched (says moved/touched), text_pride (pride/excitement in speech), text_admire (admiration/praise in speech); face_tears, face_frown, face_smile, face_neutral (facial expression); vocal_subdued, vocal_excited (voice tone); body_still, body_animated (posture/gesture); phys_cheek_warm (cheek/facial temperature increase or affiliative thermal signature), phys_temp_drop (any facial temperature decrease/cooling), phys_forehead (forehead/brow thermal signal), phys_nose_perioral (nose or mouth region thermal signal), phys_hr_up (heart rate increase), phys_hr_down (heart rate decrease), phys_hrv (heart-rate variability mentioned).",
+ "schema": [
+  "text_sad",
+  "text_anger",
+  "text_touched",
+  "text_pride",
+  "text_admire",
+  "face_tears",
+  "face_frown",
+  "face_smile",
+  "face_neutral",
+  "vocal_subdued",
+  "vocal_excited",
+  "body_still",
+  "body_animated",
+  "phys_cheek_warm",
+  "phys_temp_drop",
+  "phys_forehead",
+  "phys_nose_perioral",
+  "phys_hr_up",
+  "phys_hr_down",
+  "phys_hrv"
+ ],
+ "n_explanations": 100,
+ "label_basis": "predicted class (mean-threshold on Exp 4 sympathy/inspiration scores)",
+ "date": "2026-10-10"
+}
