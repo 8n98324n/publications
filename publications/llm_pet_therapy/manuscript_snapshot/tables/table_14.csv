@@ -1,0 +1,13 @@
+Measure,Model Call,Effect,exp(b),95% CI,p
+Smile Prevalence Rating,1,Petting Dose,2.78,"[0.86, 9.01]",.088
+Smile Prevalence Rating,1,Feeding Dose,9.58,"[2.97, 30.86]",<.001
+Smile Prevalence Rating,1,Combined Condition Departure Contrast,0.88,"[0.34, 2.24]",.784
+Smile Prevalence Rating,2,Petting Dose,2.45,"[0.78, 7.74]",.126
+Smile Prevalence Rating,2,Feeding Dose,7.93,"[2.48, 25.29]",<.001
+Smile Prevalence Rating,2,Combined Condition Departure Contrast,0.90,"[0.35, 2.30]",.830
+Smile Intensity Rating,1,Petting Dose,2.49,"[0.69, 8.93]",.162
+Smile Intensity Rating,1,Feeding Dose,6.20,"[1.69, 22.68]",.006
+Smile Intensity Rating,1,Combined Condition Departure Contrast,0.60,"[0.21, 1.70]",.335
+Smile Intensity Rating,2,Petting Dose,2.40,"[0.67, 8.53]",.177
+Smile Intensity Rating,2,Feeding Dose,5.24,"[1.46, 18.82]",.011
+Smile Intensity Rating,2,Combined Condition Departure Contrast,0.56,"[0.20, 1.59]",.275

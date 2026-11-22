@@ -17,3 +17,6 @@ temp/
 *.xlsx
 *.xls
 *.sav
+
+generated/
+private_inputs/

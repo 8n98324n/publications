@@ -1,0 +1,52 @@
+"Model, Path, or Effect Tested",b / Indirect Effect,SE / a Path,95% CI／Boot CI,t / d21 and b2 Paths,p／p_boot
+"A. Exposure-Dose Model of Feeling Needed After Interaction (H2a, n = 100)",,,,,
+Dose Model: Petting Dose Effect ★,2.05,0.70,"[0.65, 3.44]",t(97)=2.92,.004
+Dose Model: Feeding Dose Effect (H2a) ★,4.29,0.69,"[2.92, 5.66]",t(97)=6.21,<.001
+Dose Model: Combined Condition Departure Contrast (Combined Minus Mean of Single-Component Conditions),0.22,0.63,"[−1.04, 1.47]",t(96)=0.34,.734
+Planned Comparison: Petting alone vs. Active Observation ★,1.97,0.74,"[0.51, 3.43]",t(96)=2.68,.0086
+Planned Comparison: Feeding alone vs. Active Observation ★,4.22,0.72,"[2.79, 5.65]",t(96)=5.85,<.0001
+"Feeling Needed by Condition, M (SD): Active Observation / Petting / Feeding / Combined",—,—,7.42 (2.84); 9.39 (2.81); 11.64 (2.31); 10.73 (2.38),—,—
+Conventional 2 × 2 Interaction Contrast (Combined − Petting − Feeding + Active Observation),−2.88,1.04,"[−4.94, −0.82]",t(96)=−2.77,.007
+"B. Single-Mediator Model Excluding Self-Efficacy (20,000 Bootstrap Resamples)",,,,,
+Feeding Dose via Feeling Needed on STAI Total Relief,+0.17,a=+4.29***,"[−1.32, +1.99]",b=+0.04（p=.844）,.844
+"C. PROCESS Model 6 Serial Mediation (Hayes, 2022; H2b: Feeding Dose X, Feeling Needed M1, Self-Efficacy M2, Anxiety Relief Y)",,,,,
+Feeding Dose via Feeling Needed and Self-Efficacy on STAI Total Relief ★,+1.27,a1=+4.62***,"[+0.51, +2.52]","d21=+0.46***, b2=+0.60***",<.001
+Feeding Dose via Feeling Needed and Self-Efficacy on STAI-AA Calmness and Security Relief ★,+0.69,a1=+4.52***,"[+0.25, +1.47]","d21=+0.43**, b2=+0.36**",<.001
+Feeding Alone vs. Active Observation via Feeling Needed and Self-Efficacy on STAI Total Relief ★,+1.34,a1=+4.53***,"[+0.54, +2.62]","d21=+0.47***, b2=+0.64***",.0001
+"D. Parallel Mediation of Petting Alone and Feeding Alone (vs. Active Observation; Positive Affect and General Self-Efficacy as Parallel Mediators; 20,000 Bootstrap Resamples)",,,,,
+Petting Alone via Positive Affect (PANAS-PA) on STAI Total Relief,+0.72,a=+3.07**,"[−0.13, +1.92]",b=+0.24（p=.103）,.107
+Petting Alone via General Self-Efficacy (GSE) on STAI Total Relief,+0.14,a=+0.29,"[−0.64, +1.10]",b=+0.48**（p=.004）,.713
+Feeding Alone via Positive Affect (PANAS-PA) on STAI Total Relief,+0.43,a=+1.82,"[−0.18, +1.36]",b=+0.24（p=.103）,.202
+Feeding Alone via General Self-Efficacy (GSE) on STAI Total Relief,+0.81,a=+1.67,"[+0.03, +1.89]",b=+0.48**（p=.004）,.042
+Contrast Within Petting: Positive Affect Minus Self-Efficacy Pathway,+0.58,—,"[−0.71, +1.89]",—,.352
+Contrast Within Feeding: Self-Efficacy Minus Positive Affect Pathway,+0.38,—,"[−0.55, +1.47]",—,.396
+"Contrast Across Behaviors: Positive Affect Pathway, Petting Minus Feeding",+0.30,—,"[−0.29, +1.31]",—,.382
+"Contrast Across Behaviors: Self-Efficacy Pathway, Feeding Minus Petting",+0.66,—,"[−0.23, +1.74]",—,.142
+Double-Dissociation Contrast: (Petting PA − GSE) − (Feeding PA − GSE),+0.96,—,"[+0.01, +2.15]",—,.049
+Sensitivity Without Baseline Mediator Scores: Double-Dissociation Contrast,+0.17,—,"[−0.63, +1.09]",—,.597
+STAI-AA Relief: Petting Alone via Positive Affect,+0.47,a=+2.97**,"[−0.07, +1.25]",b=+0.16（p=.103）,.102
+STAI-AA Relief: Feeding Alone via General Self-Efficacy,+0.54,a=+1.67,"[+0.01, +1.30]",b=+0.32**,.043
+STAI-AA Relief: Double-Dissociation Contrast,+0.62,—,"[−0.01, +1.38]",—,.052
+"E. Exploratory Single-Mediator Screen of All Measured Psychological Variables (vs. Active Observation; 5,000 Bootstrap Resamples; BH q Across 22 Tests)",,,,,
+Petting Alone via Positive Affect on STAI Total Relief,+1.10,a=+3.02**,"[+0.17, +2.60]",b=+0.36**（p=.009）,.012 (q = .180)
+Feeding Alone via Positive Affect on STAI Total Relief,+0.56,a=+1.53,"[−0.23, +1.74]",b=+0.36**（p=.009）,.154 (q = .813)
+Petting Alone via General Self-efficacy on STAI Total Relief,+0.34,a=+0.59,"[−0.57, +1.48]",b=+0.57***（p=<.001）,.436 (q = .813)
+Feeding Alone via General Self-efficacy on STAI Total Relief,+1.15,a=+2.01*,"[+0.18, +2.51]",b=+0.57***（p=<.001）,.016 (q = .180)
+Petting Alone via Feeling Needed on STAI Total Relief,+0.06,a=+1.97**,"[−0.76, +0.90]",b=+0.03（p=.878）,.851 (q = .974)
+Feeding Alone via Feeling Needed on STAI Total Relief,+0.13,a=+4.22***,"[−1.32, +1.91]",b=+0.03（p=.878）,.848 (q = .974)
+Petting Alone via Emotional Stability on STAI Total Relief,+0.33,a=+0.71,"[−0.22, +1.41]",b=+0.46（p=.230）,.297 (q = .813)
+Feeding Alone via Emotional Stability on STAI Total Relief,+0.46,a=+0.99*,"[−0.36, +1.44]",b=+0.46（p=.230）,.272 (q = .813)
+Petting Alone via Conscientiousness on STAI Total Relief,+0.26,a=+0.34,"[−0.21, +1.02]",b=+0.76（p=.164）,.321 (q = .813)
+Feeding Alone via Conscientiousness on STAI Total Relief,+0.01,a=+0.02,"[−0.56, +0.54]",b=+0.76（p=.164）,.970 (q = .974)
+Petting Alone via Life Satisfaction on STAI Total Relief,+0.21,a=+0.62,"[−0.36, +0.86]",b=+0.34（p=.200）,.504 (q = .853)
+Feeding Alone via Life Satisfaction on STAI Total Relief,+0.25,a=+0.73,"[−0.24, +1.01]",b=+0.34（p=.200）,.362 (q = .813)
+Petting Alone via Negative Affect on STAI Total Relief,−0.28,a=+1.17,"[−1.25, +0.28]",b=−0.24（p=.083）,.383 (q = .813)
+Feeding Alone via Negative Affect on STAI Total Relief,+0.03,a=−0.11,"[−0.52, +0.70]",b=−0.24（p=.083）,.913 (q = .974)
+Petting Alone via Perceived Stress on STAI Total Relief,+0.20,a=−0.91,"[−0.20, +0.93]",b=−0.23（p=.157）,.408 (q = .813)
+Feeding Alone via Perceived Stress on STAI Total Relief,+0.18,a=−0.78,"[−0.35, +0.89]",b=−0.23（p=.157）,.574 (q = .903)
+Petting Alone via Rumination on STAI Total Relief,−0.06,a=−0.52,"[−0.83, +0.28]",b=+0.12（p=.502）,.718 (q = .962)
+Feeding Alone via Rumination on STAI Total Relief,−0.02,a=−0.19,"[−0.45, +0.40]",b=+0.12（p=.502）,.974 (q = .974)
+Petting Alone via Academic Anxiety on STAI Total Relief,+0.31,a=−0.70,"[−0.34, +1.11]",b=−0.45*（p=.019）,.352 (q = .813)
+Feeding Alone via Academic Anxiety on STAI Total Relief,+0.11,a=−0.25,"[−0.53, +0.89]",b=−0.45*（p=.019）,.743 (q = .962)
+Petting Alone via Appearance Anxiety on STAI Total Relief,+0.28,a=−2.44,"[−0.43, +1.18]",b=−0.12（p=.273）,.444 (q = .813)
+Feeding Alone via Appearance Anxiety on STAI Total Relief,+0.12,a=−1.04,"[−0.32, +0.76]",b=−0.12（p=.273）,.628 (q = .922)

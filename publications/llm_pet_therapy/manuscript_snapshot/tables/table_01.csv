@@ -1,0 +1,46 @@
+Outcome and Condition,n,Pretest M (SD),Posttest M (SD),Relief M (SD) [Reliable Relief Rate]
+"A. STAI Total (STAI-S, 20 items, range 20–80)",,,,
+Active Observation (Video Comparator),26,38.50（9.64）,35.85（8.46）,"+2.65* (4.96) [4 participants, 15.4%]"
+Petting Alone,23,40.04（11.17）,34.17（8.22）,"+5.87** (8.79) [10 participants, 43.5%]"
+Feeding Alone,25,37.64（8.11）,32.92（7.55）,"+4.72*** (6.17) [9 participants, 36.0%]"
+Combined Condition,26,37.69（10.13）,31.31（6.89）,"+6.38*** (5.22) [9 participants, 34.6%]"
+"Pooled Direct Interaction (Petting, Feeding, and Combined)",74,38.41（9.78）,32.74（7.53）,"+5.66*** (6.77) [28 participants, 37.8%]"
+Full Sample,100,38.43（9.69）,33.55（7.86）,"+4.88*** (6.45) [32 participants, 32.0%]"
+"B. Absence of Calmness and Security (STAI-AA, 10 reverse-scored items, range 10–40)",,,,
+Active Observation (Video Comparator),26,22.15（6.32）,21.65（5.93）,+0.50（4.02），p=.532（n.s.）
+Petting Alone,23,22.09（6.96）,18.43（4.99）,+3.65***（4.10），p=.0003
+Feeding Alone,25,21.80（5.57）,19.24（4.90）,+2.56*（4.85），p=.0144
+Combined Condition,26,21.58（5.85）,17.92（4.95）,+3.65***（3.14），p<.0001
+Full Sample,100,21.90（6.09）,19.34（5.34）,+2.56***（4.21），p<.0001
+"C. Presence of Acute Tension (STAI-AP, 10 directly scored items)",,,,
+Active Observation (Video Comparator),26,16.35（5.45）,14.19（4.64）,"+2.15*** (2.62), 81.1% of total relief"
+Petting Alone,23,17.96（6.05）,15.74（5.47）,+2.22（5.98），p=.0889
+Feeding Alone,25,15.84（4.11）,13.68（4.82）,+2.16**（3.02），p=.0015
+Combined Condition,26,16.12（5.52）,13.38（3.51）,+2.73***（3.09），p=.0001
+Full Sample,100,16.53（5.30）,14.21（4.65）,+2.32***（3.79），p<.0001
+"D. Participant Characteristics by Condition (Columns: Active Observation, Petting, Feeding, Combined; Test Across Conditions in Last Column)",,,,
+n,26,23,25,26
+"Age, M (SD)",21.38 (2.21),21.09 (2.09),21.20 (1.53),20.88 (1.70); F test p = .815
+"Women, n (%)",23 (88.5%),18 (78.3%),19 (76.0%),19 (73.1%); χ² p = .553
+"Undergraduates, n (%)",22 (84.6%),21 (91.3%),23 (92.0%),23 (88.5%); χ² p = .832
+"Had owned a pet, n",16,15,19,17; χ² p = .722
+"Previously scratched or bitten by a pet, n",9,8,9,11; χ² p = .933
+"Feared interaction with pets, n",5,4,6,1; χ² p = .232
+"E. Baseline Measures by Condition, M (SD) (Columns as in Panel D; One-Way ANOVA in Last Column)",,,,
+STAI total,38.50 (9.64),40.04 (11.17),37.64 (8.11),"37.69 (10.13); F(3, 96) = 0.31, p = .817"
+STAI-AA,22.15 (6.32),22.09 (6.96),21.80 (5.57),"21.58 (5.85); F(3, 96) = 0.05, p = .986"
+STAI-AP,16.35 (5.45),17.96 (6.05),15.84 (4.11),"16.12 (5.52); F(3, 96) = 0.75, p = .522"
+Positive affect,28.65 (6.87),30.04 (7.38),30.16 (6.12),"29.85 (6.63); F(3, 96) = 0.27, p = .847"
+Negative affect,22.27 (7.21),23.39 (7.16),19.60 (7.03),"20.81 (7.92); F(3, 96) = 1.24, p = .301"
+General self-efficacy,26.65 (4.73),26.35 (6.60),24.84 (4.93),"25.38 (5.15); F(3, 96) = 0.62, p = .605"
+Emotional stability,8.73 (2.16),8.26 (2.53),8.08 (1.87),"8.85 (2.31); F(3, 96) = 0.69, p = .561"
+Conscientiousness,8.77 (2.03),8.39 (2.92),8.60 (2.16),"8.31 (2.05); F(3, 96) = 0.21, p = .889"
+Life satisfaction,22.27 (5.96),21.39 (6.58),22.76 (5.46),"22.85 (5.09); F(3, 96) = 0.32, p = .812"
+Perceived stress,17.35 (6.58),18.96 (8.20),15.64 (6.15),"15.73 (7.38); F(3, 96) = 1.18, p = .323"
+Rumination,23.69 (5.58),23.61 (5.06),24.20 (5.73),"23.92 (4.94); F(3, 96) = 0.06, p = .980"
+Academic anxiety,22.81 (6.30),24.26 (6.92),23.16 (6.38),"23.27 (6.80); F(3, 96) = 0.21, p = .887"
+Appearance anxiety,47.92 (12.35),48.91 (14.50),48.20 (11.51),"45.08 (14.02); F(3, 96) = 0.42, p = .741"
+Social interaction anxiety,33.38 (17.13),30.96 (18.33),26.16 (14.99),"26.81 (15.50); F(3, 96) = 1.11, p = .350"
+Systolic BP,96.19 (10.72),97.61 (9.94),98.80 (10.61),"99.46 (12.77); F(3, 96) = 0.43, p = .730"
+Diastolic BP,62.00 (9.25),64.13 (7.78),65.00 (9.20),"62.73 (9.42); F(3, 96) = 0.58, p = .633"
+Pulse rate (BP monitor),76.19 (9.01),77.04 (12.12),80.40 (12.13),"78.50 (12.34); F(3, 96) = 0.65, p = .584"

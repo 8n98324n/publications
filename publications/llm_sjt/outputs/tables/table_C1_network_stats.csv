@@ -1,0 +1,20 @@
+Indicator,Value
+Original triples (after manual screening),4599.0
+Unique triples after frequency aggregation,4265.0
+Number of nodes,3756.0
+Number of directed edges (unique node pairs),4072.0
+Number of relation predicate types,974.0
+Graph density,0.00029
+Mean degree,2.17
+Median degree,1.0
+Maximum degree (resilience),726.0
+Proportion of leaf nodes (degree = 1),70.0
+Proportion of highly connected nodes (degree >= 10),1.9
+Number of weakly connected components,407.0
+Proportion of nodes in largest component (%),69.4
+Average shortest path length in largest component,4.33
+Diameter of largest component,15.0
+Degree assortativity coefficient,-0.133
+Mean clustering coefficient (undirected),0.02
+Global clustering coefficient (transitivity),0.003
+Highest betweenness centrality (resilience),0.37

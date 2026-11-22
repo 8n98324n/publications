@@ -1,0 +1,47 @@
+Model and Effect Tested,b,SE,Standardized b,95% CI,t(df),p（HC3 p）
+"A. Primary Exposure-Dose Model (Single Component = 1.0, Each Component in Combined = 0.5)",,,,,,
+STAI Total: Petting Dose Effect (H1) ★,3.17,1.39,0.40,"[0.41, 5.94]",2.28(96),.025（.041）
+STAI Total: Feeding Dose Effect (H2a) ★,2.92,1.37,0.37,"[0.20, 5.64]",2.13(96),.035（.034）
+STAI Total: Combined Condition Departure Contrast (Combined Minus Mean of Single-Component Conditions),1.54,1.24,0.20,"[−0.92, 4.01]",1.24(95),.217（.176）
+STAI Total: Conventional 2 × 2 Interaction Contrast (Combined − Petting − Feeding + Active Observation),−0.96,2.04,−0.12,"[−5.02, 3.09]",−0.47(95),.639（.657）
+STAI-AA (Calmness and Security): Petting Dose Effect (H1) ★,3.42,0.93,0.64,"[1.58, 5.27]",3.69(96),<.001（<.001）
+STAI-AA (Calmness and Security): Feeding Dose Effect (H2a) ★,2.42,0.91,0.45,"[0.60, 4.23]",2.64(96),.010（.023）
+STAI-AA (Calmness and Security): Combined Condition Departure Contrast (Combined Minus Mean of Single-Component Conditions),0.68,0.83,0.13,"[−0.97, 2.33]",0.82(95),.417（.371）
+STAI-AA (Calmness and Security): Conventional 2 × 2 Interaction Contrast (Combined − Petting − Feeding + Active Observation),−2.00,1.37,−0.37,"[−4.72, 0.72]",−1.46(95),.147（.156）
+STAI-AP (Acute Tension): Petting Dose Effect,−0.24,0.90,−0.05,"[−2.02, 1.54]",−0.26(96),.792（.814）
+STAI-AP (Acute Tension): Feeding Dose Effect,0.48,0.88,0.10,"[−1.27, 2.23]",0.54(96),.587（.537）
+STAI-AP (Acute Tension): Combined Condition Departure Contrast (Combined Minus Mean of Single-Component Conditions),0.84,0.80,0.18,"[−0.75, 2.43]",1.05(95),.296（.246）
+B. Sensitivity Analyses of Dose Models,,,,,,
+STAI Total: Diminishing-Returns Dose (√Duration) Petting Effect (H1)★,2.88,1.21,0.37,"[0.48, 5.28]",2.38(96),.019（.025）
+STAI Total: Diminishing-Returns Dose (√Duration) Feeding Effect (H2a)★,2.66,1.20,0.34,"[0.28, 5.05]",2.22(96),.029（.028）
+STAI Total (n=101): Petting Dose Effect ★,3.34,1.38,0.42,"[0.61, 6.07]",2.43(97),.017（.030）
+STAI Total (n=101): Feeding Dose Effect ★,3.08,1.36,0.39,"[0.39, 5.77]",2.28(97),.025（.024）
+STAI Total (n=101): Combined Condition Departure Contrast,1.54,1.24,0.20,"[−0.92, 4.01]",1.24(96),.217（—）
+C. Planned Comparisons Against Active Observation (STAI Total and STAI-AA Calmness and Security),,,,,,
+STAI Total: Pooled Direct Human–Dog Interaction vs Active Observation (Planned Contrast)★,3.02,1.16,0.38,"[0.71, 5.33]",2.60(95),.0108（.0088）
+STAI Total: Petting alone vs. Active Observation,2.60,1.46,0.33,"[−0.30, 5.51]",1.78(95),.078（.133）
+STAI Total: Feeding alone vs. Active Observation,2.41,1.43,0.31,"[−0.43, 5.24]",1.69(95),.095（.102）
+STAI Total: Combined Condition vs. Active Observation ★,4.05,1.41,0.52,"[1.24, 6.86]",2.86(95),.0051（.0006）
+STAI-AA: Pooled Direct Human–Dog Interaction vs Active Observation (Planned Contrast)★,2.91,0.78,0.54,"[1.36, 4.46]",3.73(95),.0003（.0009）
+STAI-AA: Petting alone vs. Active Observation ★,3.18,0.98,0.59,"[1.23, 5.12]",3.24(95),.0016（.0016）
+STAI-AA: Feeding alone vs. Active Observation ★,2.19,0.96,0.41,"[0.29, 4.09]",2.28(95),.0247（.056）
+STAI-AA: Combined Condition vs. Active Observation ★,3.36,0.95,0.63,"[1.48, 5.24]",3.54(95),.0006（.0005）
+"D. Robust Estimation (Huber M, Tukey Biweight, and Conover–Iman Ranks) and Participants Unafraid of Dogs (n = 84)",,,,,,
+Huber M Estimation: STAI Total Petting Dose Effect ★,2.94,1.27,0.37,"[0.46, 5.42]",z=2.32,.020（—）
+Huber M Estimation: STAI Total Feeding Dose Effect ★,3.04,1.25,0.39,"[0.60, 5.48]",z=2.44,.015（—）
+Huber M Estimation: STAI-AA Petting Dose Effect ★,3.00,0.91,0.56,"[1.22, 4.78]",z=3.31,<.001（—）
+Huber M Estimation: STAI-AA Feeding Dose Effect ★,2.49,0.89,0.47,"[0.74, 4.25]",z=2.79,.005（—）
+Tukey Biweight Estimation: STAI Total Petting Dose Effect ★,3.14,1.28,0.40,"[0.63, 5.65]",z=2.45,.014（—）
+Tukey Biweight Estimation: STAI Total Feeding Dose Effect ★,3.04,1.26,0.39,"[0.57, 5.52]",z=2.41,.016（—）
+Tukey Biweight Estimation: STAI-AA Petting Dose Effect ★,2.94,0.92,0.55,"[1.15, 4.74]",z=3.22,.001（—）
+Tukey Biweight Estimation: STAI-AA Feeding Dose Effect ★,2.42,0.90,0.45,"[0.65, 4.19]",z=2.69,.007（—）
+Conover–Iman Rank ANCOVA: STAI Total Petting Dose Effect (Rank Units),8.51,5.10,—,"[−1.63, 18.64]",1.67(96),.099（.117）
+Conover–Iman Rank ANCOVA: STAI Total Feeding Dose Effect (Rank Units),9.79,5.04,—,"[−0.21, 19.79]",1.94(96),.055（.038）
+Conover–Iman Rank ANCOVA: STAI-AA Petting Dose Effect (Rank Units) ★,18.16,4.94,—,"[8.36, 27.96]",3.68(96),<.001（<.001）
+Conover–Iman Rank ANCOVA: STAI-AA Feeding Dose Effect (Rank Units) ★,13.03,4.87,—,"[3.36, 22.69]",2.68(96),.009（.016）
+Participants Unafraid of Dogs (n=84): STAI Total Petting Dose Effect ★,4.43,1.38,0.56,"[1.68, 7.18]",3.21(80),.002（.004）
+Participants Unafraid of Dogs (n=84): STAI Total Feeding Dose Effect,2.64,1.38,0.34,"[−0.12, 5.39]",1.91(80),.060（.078）
+Participants Unafraid of Dogs (n=84): STAI-AA Petting Dose Effect ★,3.80,0.98,0.71,"[1.86, 5.75]",3.90(80),<.001（—）
+Participants Unafraid of Dogs (n=84): STAI-AA Feeding Dose Effect ★,2.45,0.98,0.46,"[0.51, 4.40]",2.51(80),.014（—）
+Participants Unafraid of Dogs (n=84): STAI Total Petting Alone vs Active Observation ★,3.99,1.46,0.52,"[1.07, 6.90]",2.72(79),.0079（.0164）
+Participants Unafraid of Dogs (n=84): STAI Total Direct Interaction vs. Active Observation ★,3.47,1.16,0.45,"[1.15, 5.78]",2.98(79),.0039（.0047）

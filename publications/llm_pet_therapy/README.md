@@ -1,56 +1,62 @@
-# Deconstructing Human-Dog Interaction: Psychological Mechanisms, Multimodal Biobehavioral Signatures, and Multimodal LLM Evaluation
+# Pet the Dog, Feed the Soul: Investigating the Psychological Mechanisms of Animal-Assisted Interventions for State Anxiety
 
-This repository contains the complete, de-identified supplementary code and tabular datasets for reproducing all analyses reported in the manuscript:
+Companion reproducibility repository for the manuscript *"Pet the Dog, Feed the Soul: Investigating the Psychological Mechanisms of Animal-Assisted Interventions for State Anxiety"* (manuscript v1.36).
 
-1. **Study 1 (`Data Analysis 1` — Self-Report Psychological & Physiological Intervention Analysis)**:
-   - Located in [`statistical_analysis/01_study1_self_report_analysis.ipynb`](statistical_analysis/01_study1_self_report_analysis.ipynb) and [`statistical_analysis/study1_self_report_analysis.py`](statistical_analysis/study1_self_report_analysis.py).
-   - Evaluates the 2×2 factorial intervention (`Petting × Feeding`, $N = 100$) across `STAI-Total` (20 items), `STAI-AA` (Absence of Calmness & Security, 10 items), `STAI-AP` (Presence of Acute Tension, 10 items), Jacobson-Truax Reliable Change Index (`RCI`), Exposure Time-Dose ANCOVA (`10 min = 1.0`, `5 min = 0.5`), `PROCESS Model 6` serial mediation (`Feeding -> Situational Mattering -> General Self-Efficacy -> Anxiety Reduction`), and dual-pathway dissociation (`Petting -> Positive Affect` vs. `Feeding -> General Self-Efficacy`).
-2. **Study 2 (`Data Analysis 2` — 19-Feature Multimodal Extraction, Statistical Analysis, and 10×5 Cross-Validated Machine Learning)**:
-   - **Feature Extraction Pipeline** ([`feature_extraction/`](feature_extraction/)): Extracts the 19 pre-specified facial (`Qwen3.5-Omni-Plus` smile prevalence/intensity, `OpenFace 2.2.0` AU05/AU07/AU12), non-semantic acoustic (`openSMILE 3.0.1` & `Silero VAD` F0 median/IQR, silent interval ratio, periodic vocalization ratio, local jitter, HNR), facial thermal (`TIStudio`/`TFAN` nasal tip and bilateral cheek temperatures), and cardiovascular (`NeuroKit2` HR, RMSSD, SDNN, and brachial SBP/DBP) features from raw recordings.
-   - **Multimodal Statistical Analysis** ([`statistical_analysis/02_study2_multimodal_statistical_analysis.ipynb`](statistical_analysis/02_study2_multimodal_statistical_analysis.ipynb)): 2×2 Factorial ANCOVA, Time-Dose ANCOVA, and cross-channel correlations with Study 1 targets.
-   - **Multimodal Machine Learning & Factorial Decoding** ([`statistical_analysis/03_study2_multimodal_machine_learning.ipynb`](statistical_analysis/03_study2_multimodal_machine_learning.ipynb)): 10×5 repeated stratified cross-validation on the $n = 92$ prediction cohort across 4-condition decoding, binary factor decoding, and Study 1 psychometric outcome prediction.
-3. **Study 2 (`Data Analysis 2` — Two-Step Pre/Post Multimodal Large Language Model [MLLM] Modality Ablation & Physiological Integration)**:
-   - Located in [`mllm.ipynb`](mllm.ipynb) and [`statistical_analysis/04_study2_mllm_analysis.ipynb`](statistical_analysis/04_study2_mllm_analysis.ipynb) with helper modules in [`utilities/`](utilities/).
-   - Evaluates `Gemini 3.5 Flash-Lite` across four progressive modality stages using a two-step independent Pre-test and Post-test prediction protocol (`STAI-AA`, `STAI-AP`, and `STAI-Total`) followed by `Pre - Post` improvement subtraction:
-     - **Experiment 1 (`Video Only`)**: Silent video frames only.
-     - **Experiment 2 (`Video + Audio, Non-Semantic Vocal Acoustics Only`)**: Visual cues + non-semantic vocal prosody (spoken word meaning strictly prohibited).
-     - **Experiment 3 (`Video + Audio + Speech Context`)**: Full audiovisual + spoken semantic context.
-     - **Experiment 4 (`Video + Audio + Speech Context + Physio`)**: Augments Experiment 3 with concurrent Heart Rate / HRV (`HeartRateInterpreter`: `mean_hr`, `rmssd`, `sdnn`, `sbp`, `dbp`) and Facial Thermal Imaging (`ThermalInterpreter`: `nose_tip_temperature`, `left_cheek_temperature`, `right_cheek_temperature`) via `InterpreterBuilder`.
-4. **Publication Figures ([`chart/`](chart/))**:
-   - Located in [`chart/manuscript_figures.ipynb`](chart/manuscript_figures.ipynb) and [`chart/generate_publication_figures.py`](chart/generate_publication_figures.py).
+## Quick Start (Single Entry Point)
 
----
+All analyses are organized around a single Jupyter notebook entry point: **[`reproduce_all_analyses.ipynb`](reproduce_all_analyses.ipynb)**.
 
-## Privacy & De-Identification Statement
+```bash
+python -m venv .venv
+# Activate .venv for your platform, then:
+python -m pip install -r requirements.txt
+python -m jupyter lab reproduce_all_analyses.ipynb
+```
 
-All raw multimedia recordings (`*.mp4`, `*.wav`, thermal matrices) and original spreadsheets containing participant names or personally identifiable information (PII) have been strictly excluded from this repository in accordance with institutional ethics and participant privacy protections. Only de-identified tabular datasets indexed by anonymous 3-digit participant IDs (`004`–`115`) are included in [`data/`](data/).
-
----
+Select **Run All** in `reproduce_all_analyses.ipynb` (or run `python scripts/reproduce.py` from the repository root) to execute the offline tabular verification pipeline and write outputs to `generated/`.
 
 ## Repository Structure
 
 ```text
-llm_pet_therapy/
-├── mllm.ipynb                          # Study 2: Multimodal LLM (Experiments 1-4) Pre/Post evaluation notebook
-├── data/                               # De-identified tabular datasets (N=100 main sample, n=92 multimodal cohort)
-│   ├── study1_self_report.csv          # De-identified Study 1 item-level & scale-level dataset
-│   ├── participants.csv                # Unified participant metadata & STAI subscales (STAI-Total, STAI-AA, STAI-AP)
-│   ├── feature_definitions.csv         # Definitions and units for the 19 multimodal features
-│   ├── features_pre.csv                # Pre-intervention values of the 19 multimodal features
-│   ├── features_post.csv               # Post-intervention values of the 19 multimodal features
-│   ├── features_delta.csv              # Post-minus-Pre change scores of the 19 multimodal features
-│   └── cv/                             # Pre-registered 10x5 repeated stratified CV split definitions
-├── feature_extraction/                 # Study 2: Multimodal feature extraction pipeline (Facial, Acoustic, Thermal, HRV)
-├── statistical_analysis/               # Study 1 & Study 2: Statistical & ML notebooks, scripts, and output CSVs
-│   ├── 01_study1_self_report_analysis.ipynb
-│   ├── 02_study2_multimodal_statistical_analysis.ipynb
-│   ├── 03_study2_multimodal_machine_learning.ipynb
-│   ├── 04_study2_mllm_analysis.ipynb
-│   └── outputs/                        # Reproducible CSV tables generated by the statistical, ML, & MLLM pipelines
-├── chart/                              # High-resolution publication figure generation scripts & notebook
-│   ├── manuscript_figures.ipynb
-│   ├── generate_publication_figures.py
-│   └── figures/
-├── utilities/                          # Helper modules for mllm.ipynb (data loader, Gemini API helper, analysis helper)
-└── env/                                # Configuration directory (.env is git-ignored)
+pet-the-dog-feed-the-soul/
+├── reproduce_all_analyses.ipynb   # Single entry-point notebook for all analyses
+├── README.md                      # Repository documentation & manuscript mapping
+├── requirements.txt               # Python dependencies
+├── .gitignore
+├── scripts/
+│   └── reproduce.py               # Offline tabular analysis & figure verification pipeline
+├── data/                          # De-identified participant-level & feature-level tables
+│   ├── participants.csv           # Analysis 1 sample (n = 100) and Analysis 2 scope (n = 92)
+│   ├── study1_self_report.csv     # Full self-report measures
+│   ├── features_paired.csv        # 19 multimodal features (pretest & posttest)
+│   ├── model_predictions/         # Frozen zero-shot MLLM predictions (Experiments 1–4)
+│   └── cv/                        # Cross-validation splits, seeds, and permutation indices
+├── statistical_analysis/          # Modular Analysis 1 & Analysis 2 statistical and ML scripts/notebooks
+├── feature_extraction/            # Upstream audio, facial AU, thermal, and HRV extraction modules
+├── chart/                         # Publication figure generation scripts and notebook
+├── utilities/                     # Shared helper modules
+├── mllm.ipynb                     # Upstream zero-shot MLLM inference notebook (requires raw video/API)
+└── manuscript_snapshot/           # Archived manuscript figure assets and SHA-256 checksums
 ```
+
+## Manuscript-to-Code Coverage (v1.36)
+
+| Manuscript Item | Coverage in This Repository |
+|---|---|
+| **Figures 1–2** | Design and procedure diagrams (`chart/`, `manuscript_snapshot/`). |
+| **Figure 3 & Appendix Tables A1–A2** | Recalculated STAI total, STAI-AA, and STAI-AP descriptives, reliable relief rates ($\Delta\text{STAI} \ge 7.33$), and baseline-adjusted exposure-dose ANCOVAs (`scripts/reproduce.py`, `statistical_analysis/`). |
+| **Figure 4 & Appendix Table A3** | Feeling needed dose effects, PROCESS Model 6 serial mediation, parallel mediation, and 11-variable mediator screen (`statistical_analysis/study1_self_report_analysis.py`, `manuscript_snapshot/`). |
+| **Figure 5** | Individual-difference moderation analyses (`statistical_analysis/study1_self_report_analysis.py`, `manuscript_snapshot/`). |
+| **Figure 6 & Appendix Tables A4–A5; Supplementary Tables S3–S4** | Recalculated exposure-dose and departure-contrast effects across all 19 multimodal features with Benjamini–Hochberg FDR control (`scripts/reproduce.py`, `statistical_analysis/study2_multimodal_statistics.py`). |
+| **Figure 7 & Appendix Table A6** | Baseline-adjusted residual correlations across 19 features × 6 psychological outcomes (114 tests with BH-FDR control; `scripts/reproduce.py`, `statistical_analysis/study2_multimodal_statistics.py`). |
+| **Figure 8 & Appendix Table A7 (Panel D)** | Nested 5-fold cross-validation (10 repetitions) for feeding and petting component classification and permutation feature importance (`statistical_analysis/03_study2_multimodal_machine_learning.ipynb`, `data/cv/`). |
+| **Supplementary Figures S1–S2 & Appendix Table A7 (Panel A)** | Nested grouped cross-validation for contemporaneous state anxiety regression with univariate feature selection (`statistical_analysis/03_study2_multimodal_machine_learning.ipynb`). |
+| **Supplementary Figure S3 & Appendix Table A7 (Panels B–C)** | Offline replay of zero-shot MLLM predictions (Experiments 1–4: MAE, $R^2$, pooled Pearson $r$) from `data/model_predictions/` (`scripts/reproduce.py`, `statistical_analysis/04_study2_mllm_analysis.ipynb`). |
+| **Appendices B, C, D, E & Supplementary Tables S1–S2** | Technical feature-extraction specifications, smile-coding repeatability (`data/smile_repeats.csv`), and self-report psychometric definitions (`feature_extraction/`, `statistical_analysis/config/`). |
+
+## Notes on Data Privacy & Upstream Modules
+
+- No raw audiovisual recordings, raw thermal videos, API credentials, or personally identifiable information are included in this repository.
+- The offline entry point (`reproduce_all_analyses.ipynb`) runs entirely on the de-identified tabular inputs in `data/` without requiring external API keys.
+- Upstream extraction modules (`feature_extraction/`) and raw MLLM inference (`mllm.ipynb`) are provided for methodological transparency and require restricted raw recordings and local API configuration to execute.
+- Before making the repository public on GitHub, ensure institutional ethics/team clearance for participant-level tables and add your chosen license file (e.g., MIT for code, CC-BY-4.0 for data).

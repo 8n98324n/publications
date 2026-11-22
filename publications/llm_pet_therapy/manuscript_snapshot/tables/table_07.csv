@@ -1,0 +1,51 @@
+Outcome and Model,MAE（SD）,R²（SD）,r（SD）,
+"A. Machine Learning: Predicting State Anxiety From 19 Contemporaneous Features (184 Pooled Observations, Three Regressors With Nested Univariate Feature Selection, 10 Repetitions of Grouped Five-Fold Nested Cross-Validation)",MAE（SD）,R²（SD）,r（SD）,
+STAI Total: Training-Fold Mean Baseline,7.13（0.03）,−.014（.008）,—,
+STAI Total: Training-Fold Median Baseline,7.00（0.04）,−.035（.009）,—,
+STAI Total: Elastic Net Regression,7.21（0.11）,−.037（.019）,−.023（.043）,
+STAI Total: Support Vector Regression (RBF Kernel),7.22（0.12）,−.055（.029）,−.007（.061）,
+STAI Total: Random Forest Regression,7.35（0.12）,−.086（.022）,−.061（.047）,
+STAI-AA: Training-Fold Mean Baseline,4.75（0.02）,−.013（.011）,—,
+STAI-AA: Training-Fold Median Baseline,4.74（0.03）,−.017（.012）,—,
+STAI-AA: Elastic Net Regression,4.84（0.06）,−.036（.031）,.022（.063）,
+STAI-AA: Support Vector Regression (RBF Kernel),4.87（0.07）,−.060（.034）,.025（.055）,
+STAI-AA: Random Forest Regression,4.94（0.04）,−.086（.020）,−.040（.034）,
+STAI-AP: Training-Fold Mean Baseline,3.65（0.02）,−.017（.011）,—,
+STAI-AP: Training-Fold Median Baseline,3.41（0.00）,−.053（.000）,—,
+STAI-AP: Elastic Net Regression,3.65（0.03）,−.020（.013）,—,
+STAI-AP: Support Vector Regression (RBF Kernel),3.42（0.02）,−.055（.003）,—,
+STAI-AP: Random Forest Regression,3.79（0.06）,−.086（.033）,−.072（.051）,
+B. Zero-Shot MLLM: Separate Prediction for Pretest and Posttest Recordings (184 Clips),MAE,R²,r［95% CI］,
+Experiment 1 (Visual Only): STAI Total,7.66,−.279,".12［−.05, .28］",
+Experiment 1 (Visual Only): STAI-AA,5.38,−.321,".09［−.06, .24］",
+Experiment 1 (Visual Only): STAI-AP,3.87,−.226,".09［−.07, .27］",
+Experiment 2 (Plus Nonsemantic Acoustics): STAI Total,7.76,−.314,".18［.03, .32］",
+Experiment 2 (Plus Nonsemantic Acoustics): STAI-AA,5.18,−.228,".19［.05, .33］",
+Experiment 2 (Plus Nonsemantic Acoustics): STAI-AP,4.32,−.367,".10［−.03, .24］",
+Experiment 3 (Plus Speech Semantics): STAI Total,8.18,−.374,".20［.05, .35］",
+Experiment 3 (Plus Speech Semantics): STAI-AA,5.40,−.288,".15［.00, .30］",
+Experiment 3 (Plus Speech Semantics): STAI-AP,4.38,−.387,".20［.07, .34］",
+Experiment 4 (Plus HRV and Thermography): STAI Total,8.64,−.501,".10［−.03, .23］",
+Experiment 4 (Plus HRV and Thermography): STAI-AA,5.55,−.352,".11［−.05, .26］",
+Experiment 4 (Plus HRV and Thermography): STAI-AP,4.84,−.625,".07［−.04, .20］",
+C. Cues in MLLM Explanations (184 Clips per Experiment; Cues in Fewer Than 10 Clips Omitted),Cue Mention Rate,"Prediction Shift ΔPred [95% CI, Clustered]",Self-Report Difference ΔGT,"p（ΔGT, Clustered）; q"
+Experiment 2: Relaxed Facial Muscles and Steady Gaze,57.6% (106 clips),"−8.29［−9.97, −6.61］",−0.60,.674; q = .953
+Experiment 2: Flat or Rigid Expression and Guarded Gaze,19.6% (36 clips),"+5.88［+3.18, +8.58］",−0.39,.791; q = .953
+"Experiment 2: Steady, Warm Voice",29.3% (54 clips),"−3.17［−4.97, −1.36］",−3.89,.005; q = .049
+"Experiment 2: Tense Voice, Jitter, and Pauses",28.8% (53 clips),"+2.22［+0.19, +4.24］",−0.26,.857; q = .953
+Experiment 2: Visible Smile and Positive Affect,23.9% (44 clips),"−4.01［−5.77, −2.25］",+0.09,.958; q = .958
+"Experiment 3: Speech Expressing Liking, Comfort, or Relaxation",46.2% (85 clips),"−5.31［−7.25, −3.37］",−1.27,.327; q = .893
+Experiment 3: Speech Mentioning Academic or Daily Stress,22.3% (41 clips),"+7.86［+5.61, +10.12］",+0.68,.630; q = .953
+Experiment 3: Higher Pitch and Hesitation,8.7% (16 clips),"+7.78［+4.43, +11.12］",+0.54,.858; q = .953
+Experiment 4: Low Heart Rate and High RMSSD/SDNN,25.5% (47 clips),"−4.68［−6.60, −2.76］",+1.73,.357; q = .893
+"Experiment 4: High Heart Rate, Low HRV, and Elevated Blood Pressure",31.0% (57 clips),"+5.79［+3.63, +7.95］",−2.73,.062; q = .311
+"D. Identification of Experimental Components (92 Participants, Three Classifiers, 10 Repetitions of Five-Fold Nested Cross-Validation)",Feeding: BA (SD); Permutation p,Feeding: AUC (SD),Petting: BA (SD); Permutation p,Petting: AUC (SD)
+Logistic Regression (Elastic Net),72.0%（2.9）；p=.002,.779（.033）,58.2%（5.7）；p=.028,.591（.063）
+Support Vector Machine (RBF Kernel),70.4%（4.8）；p=.002,.748（.038）,54.3%（4.1）；p=.128,.546（.040）
+Random Forest,67.5%（4.0）；p=.005,.735（.051）,52.6%（4.5）；p=.184,.524（.034）
+Logistic Regression (Elastic Net): Complete Thermal Data (n = 78),71.5%（3.3）,.756,59.8%（3.7）,.621
+Support Vector Machine (RBF Kernel): Complete Thermal Data (n = 78),65.7%（3.6）,.700,54.6%（3.8）,.539
+Random Forest: Complete Thermal Data (n = 78),63.1%（4.7）,.696,53.8%（5.4）,.546
+Logistic Regression (Elastic Net): All 19 Features Complete (n = 67),69.0%（5.0）,.725,55.1%（3.2）,.579
+Support Vector Machine (RBF Kernel): All 19 Features Complete (n = 67),69.6%（2.8）,.743,52.0%（4.2）,.516
+Random Forest: All 19 Features Complete (n = 67),65.4%（5.4）,.694,48.8%（5.8）,.500

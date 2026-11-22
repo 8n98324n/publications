@@ -1,0 +1,59 @@
+{
+  "corpus_pdfs": {
+    "conceptual_reviews_count": 17,
+    "measurement_scales_count": 16,
+    "conceptual_review_files": [
+      "A SYSTEMATIC REVIEW OF PSYCHOMETRIC PROPERTIES OF WORKPLACE RESILIENCE MEASUREMENT SCALES.pdf",
+      "Beyond risk  resilience  and dysregulation  Phenotypic plasticity and human development.pdf",
+      "Intervention studies to foster resilience– A systematic review and proposal for a resilience framework in future intervention studies.pdf",
+      "Ordinary magic Resilience processes.pdf",
+      "Psychological resilience  an update on definitions  a critical appraisal  and research recommendations.pdf",
+      "Resilience and mental health how multisystemic processes contribute to positive outcomes.pdf",
+      "Resilience as a translational endpoint in the treatment of PTSD.pdf",
+      "Resilience as an Integrative, Measurable Concept for Humanitarian and Development Programming.pdf",
+      "Resilience in psychology A critical analysis of the concept.pdf",
+      "Review of Resilience Conceptual , Assessment and Intervention.pdf",
+      "The Construct of Resilience A Critical Evaluation and Guidelines for Future Work.pdf",
+      "The Science of Resilience Implications for the Prevention and Treatment of Depression.pdf",
+      "The association of resilience on psychiatric  substance use  and physical health outcomes in combat trauma-exposed military service members and vetera.pdf",
+      "The construct of resilience Implications for interventions and social policies.pdf",
+      "The development of the person The Minnesota Study of Risk and Adaptation from Birth to Adulthood.pdf",
+      "What is resilience  A review and concept analysis.pdf",
+      "What is resilience An Integrative Review of the empirical literature.pdf"
+    ],
+    "measurement_scale_files": [
+      "A methodological review of resilience measurement scales.pdf",
+      "A systematic review of cross-cultural measures of resilience and its promotive and protective factors.pdf",
+      "Assessing Psychological Resilience Development and Psychometric Properties of the English and Dutch Version of the Resilience Evaluation Scale (RES).pdf",
+      "Capturing Resilience in Context Development and Validation of a Situational Judgment Test of Resilience.pdf",
+      "Development of a new resilience scale the connor-davidson resilience scale(CD-RISC).pdf",
+      "Evaluation of reliability generalization of Conner-Davison Resilience Scale (CD-RISC-10 and CD-RISC-25) A Meta-analysis.pdf",
+      "Exploring the Psychometric Properties of the Connor-Davidson Resilience Scale (CD-RISC).pdf",
+      "Factor structure and psychometric properties of the Connor-Davidson Resilience Scale among Chinese adolescents.pdf",
+      "Measures of adult psychological resilience following early-life adversity how congruent are different measures.pdf",
+      "Measuring and assessing resilience  broadening understanding through multiple disciplinary perspectives.pdf",
+      "Psychometric Properties of Scales Measuring Resilience in U.S. Latinx Populations A Systematic Review.pdf",
+      "Psychometric analysis and refinement of the connor–davidson resilience scale (CD-RISC)  Validation of a 10-item measure of resilience.pdf",
+      "Resilience Resources Scale A brief resilience measure validated with undergraduate students.pdf",
+      "Resilient Individuals Use Positive Emotions to Bounce Back From Negative Emotional Experiences.pdf",
+      "The brief resilience scale Assessing the ability to bounce back.pdf",
+      "Whose resilience matters Like-for-like comparison of objective and subjective evaluations of resili.pdf"
+    ]
+  },
+  "sentences_extracted": {
+    "total": 24603,
+    "conceptual_reviews": 14092,
+    "measurement_scales": 10511
+  },
+  "rag_candidates_top6000": {
+    "total": 6000,
+    "conceptual_reviews": 2969,
+    "measurement_scales": 3031
+  },
+  "semantic_cleaned_sentences": {
+    "total": 4714,
+    "conceptual_reviews": 0,
+    "measurement_scales": 0
+  },
+  "screened_triples_before_dedup": 4599
+}
